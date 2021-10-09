@@ -1,13 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
 
-<html lang="en">
-<head>
-  <title>RADIUS PROJECT</title>
-</head>
+{% block content %}
 
-<body>
-  <h1>This is a test</h1>
-  <h2>This is test</h2>
-  <p>This is a paragraph.</p>
-</body>
 
-</html>
+<!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="{% static 'img/logo-1' %}" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <!-- Close Btn -->
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="Search">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% include 'partials/navbar.html' %}
+
+
+
+{% endblock %}
