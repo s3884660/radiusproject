@@ -1,21 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
   <head>
-    <title>Interactive maps for Django web apps</title>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <meta charset='utf-8' />
+    <title>Points on a map</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      #map { 
+        width: 800px; 
+        height: 500px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Map time!</h1>
-    <div id='map' style='width: 800px; height: 500px;'></div>
+    <h1>Map:</h1>
+    <div id='map'></div>
     <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiamFjb3BvZ3JhYmFyIiwiYSI6ImNrdWl5YmlxZzB3cGIycG14bWV2cG81dXEifQ.usbYmuIAIlQVY4Spwk7aww';
-    var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/jacopograbar/ckuiygwp15r4m17qmlagfxrw9',
-    center: [151.217140, -33.871846],
-    zoom: 12,
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamFjb3BvZ3JhYmFyIiwiYSI6ImNrdWl5YmlxZzB3cGIycG14bWV2cG81dXEifQ.usbYmuIAIlQVY4Spwk7aww'; 
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/jacopograbar/ckuiygwp15r4m17qmlagfxrw9', 
+      center: [151.217140, -33.871846],
+      zoom: 12
     });
+    // Add an event listener that runs when a user clicks on the map element.
+    map.on('click', ({ point }) => {
+    // If the user clicked on one of your markers, get its information.
+    const features = map.queryRenderedFeatures(point, {layers: ['sydney-activities']});
+    if (!features.length) {
+    return;
+    }
+    const feature = features[0];
+
+    //Create a popup, specify its options and properties, and add it to the map.
+    const popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML(
+    `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+    )
+    .addTo(map);
+    });
+
     </script>
   </body>
 </html>
