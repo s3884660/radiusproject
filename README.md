@@ -1,3 +1,6 @@
 # radiusproject
 To be updated
-#test
+
+radiusproject -> core project<br/>
+
+radius folder -> application 
