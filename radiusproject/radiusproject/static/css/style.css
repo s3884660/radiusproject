@@ -1,0 +1,146 @@
+/* general style --- This will be changed when we have more info */
+
+body{
+	font-family: Arial, Helvetica, Sans-Serif;
+}
+
+p{
+	font-family: Georgia, "Times New Roman", Serif;
+	font-size: 14px;
+	line-height: 20px
+}
+
+.btn{
+	border: 3px solid #A9A9A9;
+	padding: 10px 30px;
+	color:#A9A9A9;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .1em;
+}
+
+.btn:hover {
+	color: #000000;
+	border-color: #000000;
+
+}
+
+/*header*/
+
+.header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: #ffffff;
+	padding: 15px 0;
+	z-index: 10;
+	height: 100px;
+}
+
+.header_menu{
+	text-align: right;
+
+}
+
+.header_menu ul li{
+	display: inline-block;
+	margin-left: 25px;
+	margin-top: 20px;
+}
+
+.header_menu ul li a{
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 10px 0;
+}
+
+
+.header_menu ul li a:hover{
+ 	color: #000000;
+}
+
+/*  sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 250px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* side bar hover */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+/* responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/*#preloader {*/
+/*  background-color: #ffffff;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  z-index: 5000; }*/
+/*  #preloader img {*/
+/*    width: 30px;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    -webkit-transform: translate(-50%, -50%);*/
+/*    transform: translate(-50%, -50%);*/
+/*    z-index: 10; }*/
+/*  #preloader .circle-preloader {*/
+/*    display: block;*/
+/*    width: 60px;*/
+/*    height: 60px;*/
+/*    border: 2px solid #ccc;*/
+/*    border-bottom-color: #1c8314;*/
+/*    border-radius: 50%;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    margin: auto;*/
+/*    animation: spin 2s infinite linear; }*/
+/*@-webkit-keyframes spin {*/
+/*  100% {*/
+/*    -webkit-transform: rotate(360deg);*/
+/*    transform: rotate(360deg); } }*/
+/*@keyframes spin {*/
+/*  100% {*/
+/*    -webkit-transform: rotate(360deg);*/
+/*    transform: rotate(360deg); } }*/
