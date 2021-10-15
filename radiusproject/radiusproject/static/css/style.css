@@ -25,12 +25,17 @@ body {
     line-height: 1.58;
     font-size: 14px;
     padding: 5px, 5px, 5px;
+    min-height:calc(100vh - 2 * 12px);
 }
 
 .masthead{
     display:flex;
     align-items: center;
     justify-content:left;
+}
+
+html {
+  min-height:100vh;
 }
 
 
@@ -121,16 +126,6 @@ ul {
 
 /* general style --- This will be changed when we have more info */
 
-body{
-	font-family: Arial, Helvetica, Sans-Serif;
-}
-
-p{
-	font-family: Georgia, "Times New Roman", Serif;
-	font-size: 14px;
-	line-height: 20px
-}
-
 .btn{
 	border: 3px solid #A9A9A9;
 	padding: 10px 30px;
@@ -148,43 +143,7 @@ p{
 
 }
 
-/*header*/
 
-.header{
-	position: fixed;
-	top: 0;
-	width: 100%;
-	background: #ffffff;
-	padding: 15px 0;
-	z-index: 10;
-	height: 100px;
-}
-
-.header_menu{
-	text-align: right;
-
-}
-
-.header_menu ul li{
-	display: inline-block;
-	margin-left: 25px;
-	margin-top: 20px;
-}
-
-.header_menu ul li a{
-	color: #000;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: .1em;
-	font-size: 14px;
-	line-height: 20px;
-	padding: 10px 0;
-}
-
-
-.header_menu ul li a:hover{
- 	color: #000000;
-}
 
 /*  sidebar menu */
 .sidenav {
@@ -211,18 +170,6 @@ p{
 /* side bar hover */
 .sidenav a:hover {
   color: #f1f1f1;
-}
-
-/* Style page content */
-.main {
-  margin-left: 160px;
-  padding: 0px 10px;
-}
-
-/* responsiveness */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
 }
 
 

@@ -1,15 +1,16 @@
 {% load static %}
 
-<header class="header">
-		<div class="container">
-			<a href="{% url 'index' %}" class="grid-4">
-				<img src="{% static 'img/logo-small.png' %}" alt="Radius">
-			</a>
-			<nav class="grid-12 header_menu">
-				<ul>
-					<a href="{% url 'index' %}" class="btn">Login</a>
-				</ul>
-			</nav>
-		</div>
-	</header>
+<header>
+	<div class="masthead">
+		<img src="{% static 'img/logo-small.png' %}" class="logo" alt="RadiUS logo">
+		<h1></h1>
+	</div>
+	<nav>
+		<ul>
+		  	<li><a href="#">Link 1</a></li>
+		  	<li><a href="#">Link 2</a></li>
+		  	<li><a href="#">Link 3</a></li>
+		</ul>
+	</nav>
+</header>
 
