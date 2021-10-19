@@ -124,53 +124,6 @@ ul {
 
 
 
-/* general style --- This will be changed when we have more info */
-
-.btn{
-	border: 3px solid #A9A9A9;
-	padding: 10px 30px;
-	color:#A9A9A9;
-	font-size: 14px;
-	line-height: 20px;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: .1em;
-}
-
-.btn:hover {
-	color: #000000;
-	border-color: #000000;
-
-}
-
-
-
-/*  sidebar menu */
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 250px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-}
-
-/* side bar hover */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
 
 
 /*#preloader {*/
