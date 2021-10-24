@@ -11,6 +11,11 @@ def signin(request):
     return render(request, 'sign-in-page.html', {'title': 'Sign in'})
 
 
+# login
+def login(request):
+    return render(request, 'login.html')
+
+
 # map
 def default_map(request):
     # TODO: move this token to Django settings from an environment variable
