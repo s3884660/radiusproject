@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -22,6 +23,7 @@ def signup(request):
 
 
 # map
+@login_required
 def default_map(request):
     # TODO: move this token to Django settings from an environment variable
     # found in the Mapbox account settings and getting started instructions
