@@ -16,6 +16,11 @@ def login(request):
     return render(request, 'login.html')
 
 
+# signup
+def signup(request):
+    return render(request, 'signup.html')
+
+
 # map
 def default_map(request):
     # TODO: move this token to Django settings from an environment variable
