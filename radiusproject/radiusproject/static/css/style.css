@@ -85,6 +85,13 @@ nav ul>li:active{
   background-color: var(--clr-lightGreen2);
 }
 
+#map { 
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px; 
+    height: 200px;
+  }
+
 
 /* ------------- RWD styling -------------*/
 
@@ -119,6 +126,11 @@ nav ul>li:active{
         padding-left:3%;
         padding-right:3%; 
     }
+
+    #map { 
+        width: 600px; 
+        height: 300px;
+      }
 }
 
 @media(min-width: 1008px){
@@ -126,6 +138,11 @@ nav ul>li:active{
     body{
         font-size:18px;
     }
+
+    #map { 
+        width: 900px; 
+        height: 400px;
+      }
 }
 
 /*------- Main pages css ------ */
