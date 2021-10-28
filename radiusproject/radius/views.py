@@ -1,11 +1,36 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
+#test activities
+activities = [
+    {
+        'title': 'Activity 1',
+        'description': 'First post content',
+        'img' : 'logo_icon.png',
+        'date_posted': 'October 4, 2021'
+    },
+        {
+        'title': 'Activity 2',
+        'description': 'Second post content',
+        'img' : 'logo_icon.png',
+        'date_posted': 'October 4, 2021'
+    },
+        {
+        'title': 'Activity 3',
+        'description': 'Third post content',
+        'img' : 'logo_icon.png',
+        'date_posted': 'October 4, 2021'
+    }
+]
 
-# Create your views here.
+
+#views
 
 def index(request):
-    return render(request, 'index.html', {'title': 'Home'})
+    context = {
+        'activities': activities
+    }
+    return render(request, 'index.html', context)
 
 
 def signin(request):

@@ -1,0 +1,13 @@
+{% load static %}
+    <div class="activityList">
+    {% for activity in activities %}
+    <div class="activity_container">
+    <img src="static/img/{{activity.img}}" alt="{{ activity.title }}" class="overlay_img">
+            <div class="activity_title">{{ activity.title }}</div>
+            <div class="overlay_description">{{ activity.description }}</div>
+    </div>
+    {% endfor %}
+    </div>
+
+
+
