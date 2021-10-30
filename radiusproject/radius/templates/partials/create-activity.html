@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container" id="container">
+	<div class="form-container create-activity-container">
+		<form action="#">
+			<h1>Create Activity</h1>
+			<input type="title" placeholder="Enter activity title" />
+			<input type="description" placeholder="Enter activity description" />
+			<input type="address" placeholder="Enter activity address (e.g 54 Hillcrest Rd, Mowbray, TAS, 7250)" />
+			<!-- TODO Date and Time-->
+			<input type="date" placeholder="Date" />
+			<input type="time" placeholder="Time" />
+			<!--TODO upload image -->
+			<br>
+			<button>Cancel</button>
+			<br>
+			<button>Submit Activity</button>
+			
+		</form>
+	</div>
+	<div class="form-container create-activity-container">
+
+		</form>
+	</div>
+</div>
+
+{% endblock %}

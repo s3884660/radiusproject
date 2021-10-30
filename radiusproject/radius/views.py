@@ -67,3 +67,7 @@ def default_map(request):
     mapbox_access_token = 'pk.my_mapbox_access_token'
     return render(request, 'maps.html',
                   {'mapbox_access_token': mapbox_access_token})
+
+# create activity
+def create_activity(request):
+    return render(request, 'create-activity-page.html')
