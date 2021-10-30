@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
+from .forms import *
 
 #test activities
 activities = [
@@ -44,7 +46,16 @@ def login(request):
 
 # signup
 def signup(request):
-    return render(request, 'signup.html')
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            #process signup
+            return HttpResponseRedirect('avatar.html')
+    else:
+        context = {
+            'form': SignUpForm,
+        }
+        return render(request, 'registration/signup.html', context)
 
 
 # map
