@@ -2,23 +2,45 @@
 {% load static %}
 
 {% block content %}
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>RadiUs</h1>
-			<h2>Welcome</h2>
-			<h3>Join the community</h3>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
-			<button>Sign In</button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
 
-		</form>
+<div class="top-icon">
+			<img src="img/frame-13.png" alt="Radius-Logo">
+		</div>
+		<div class="top-icon">
+			<p>Welcome Back!</p>
+		</div>
+
+
+	<section class="portfolio">
+		<div class="container-imputs-fields">
+			<ul class="imput-fields">
+				<p >Email</p>
+				<li><input type="text"></li>
+				<p>Password</p>
+				<li><input type="text"></li>
+			</ul>
+		</div>
+
+	</section>
+
+	<section>
+	<div class="container-welcome-page">
+		<tr>
+		<ul class="portfolio_items">
+			<li><img src="img/radius-map.png" alt="radius-map"></li>
+
+		</ul>
+		</tr>
 	</div>
-</div>
+</section>
+
+<section buttons>
+	<div class="button-login">
+		<span style="display: inline;">
+			<button class="button-login button-login1">Sign in</button>
+			<button class="button button-login2">Sign up</button>
+	</span>
+	</div>
+</section>
 
 {% endblock %}
