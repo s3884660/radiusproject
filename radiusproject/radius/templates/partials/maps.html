@@ -7,6 +7,19 @@
       center: [151.217140, -33.871846],
       zoom: 12
     });
+
+    // Add geolocate control to the map.
+    map.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+        },
+        // When active the map will receive updates to the device's location as it changes.
+        trackUserLocation: true,
+        // Draw an arrow next to the location dot to indicate which direction the device is heading.
+        //showUserHeading: true
+      })
+    );
     // Add an event listener that runs when a user clicks on the map element.
     map.on('click', ({ point }) => {
     // If the user clicked on one of your markers, get its information.
