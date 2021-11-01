@@ -12,5 +12,7 @@ urlpatterns = [
     path('login', RedirectView.as_view(url='accounts/login/', permanent=True)),
     path('signup/', views.signup),
     path('signup', views.signup),
-    path('create', views.create_activity)
+    path('create', views.create_activity),
+    path('activity', views.acitivty),
+    path('about', views.about)
 ]

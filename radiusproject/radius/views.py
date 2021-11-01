@@ -68,6 +68,18 @@ def default_map(request):
     return render(request, 'maps.html',
                   {'mapbox_access_token': mapbox_access_token})
 
+
 # create activity
 def create_activity(request):
     return render(request, 'create-activity-page.html')
+
+
+
+# activity page
+def acitivty(request):
+    return render(request, 'activity-page.html')
+
+
+# about page
+def about(request):
+    return render(request, 'about.html')
