@@ -1,0 +1,11 @@
+{% extends "../base.html" %}
+
+{% block content %}
+  <h1>Name: {{ activity.name }}</h1>
+
+<p>Tags: {{ activity.tags.all|join:", " }}</p>
+
+<p>Description : {{ activity.description }}</p>
+<p>Address : {{ activity.address }}</p>
+<p>Time & Date : {{ activity.datetime }}</p>
+{% endblock %}

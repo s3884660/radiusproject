@@ -13,6 +13,8 @@ urlpatterns = [
     path('signup/', views.signup),
     path('signup', views.signup),
     path('create', views.create_activity),
-    path('activity', views.acitivty),
-    path('about', views.about)
+    path('activity', views.activity),
+    path('about', views.about),
+    path('activities/', views.ActivityListView.as_view(), name='activities'),
+    path('activities/<str:pk>', views.ActivityDetailView.as_view(), name='activity-detail'),
 ]
