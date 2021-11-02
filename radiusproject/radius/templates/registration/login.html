@@ -36,45 +36,49 @@
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 
-<div class="top-icon">
-			<img src="{% static 'img/frame-13.png' %}" alt="Radius-Logo">
-		</div>
-		<div class="top-icon">
-			<p>Welcome Back!</p>
-		</div>
 
+<!--Front end still WIP-->
 
-	<section class="portfolio">
-		<div class="container-imputs-fields">
-			<ul class="imput-fields">
-				<p >Email</p>
-				<li><input type="text"></li>
-				<p>Password</p>
-				<li><input type="text"></li>
-			</ul>
-		</div>
-
-	</section>
-
-	<section>
-	<div class="container-welcome-page">
-		<tr>
-		<ul class="portfolio_items">
-			<li><img src="img/radius-map.png" alt="radius-map"></li>
-
-		</ul>
-		</tr>
-	</div>
-</section>
-
-<section buttons>
-	<div class="button-login">
-		<span>
-			<button class="button-login button-login1">Sign in</button>
-			<button class="button button-login2">Sign up</button>
-	</span>
-	</div>
-</section>
+<div class="container-login-page">
+      <input type="checkbox" id="flip">
+      <div class="cover">
+        <div class="front">
+          <img src="{% static 'img/radius-map.png' %}" alt="Radius-Map">
+        </div>
+        <div class="grid-column">
+          <div class="logo-icon">
+             <img src="{% static 'img/frame-13.png' %}" alt="Radius-Map">
+            <span class="text-2"></span>
+          </div>
+        </div>
+      </div>
+      <div class="forms">
+          <div class="form-content">
+            <div class="login-form">
+              <div class="title">Welcome Back!</div>
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+					<p>Email</p>
+                  <input type="text" placeholder="Enter email" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+					<p>Password</p>
+                  <input type="password" placeholder="Enter password" required>
+                </div>
+				<div class="button">
+                  <input type="submit" value="Sign Up">
+                </div>
+				  <div class="button">
+                  <input type="submit" value="Sign In">
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+      </div>
 
 {% endblock %}
 
