@@ -304,109 +304,50 @@ input {
 
 /* ------------- Sign in pages ------------- */
 
-.container-welcome-page{
-	align-items: right;
-	width: 960px;
-    padding: 0px;
-	/* position: relative; */
-	align-items: right;
-	text-align: right;
-    margin: 30px auto 0;
+
+.container-login-page{
+    position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  perspective: 2700px;
 }
 
-.container-imputs-fields{
-	align-items: right;
-	width: 450px;
-	height: 804px;
-    align-items: left;
-	text-align: left;
-    float: left;
-    padding: 10px 0px 0px 300px;
-    margin: 250px auto 0;
-
+.container-login-page .cover{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
 }
 
-.container-imputs-fields li{
-
-align-items: left;
-padding-bottom: 10px;
-margin-top: 5px;
-margin-bottom: 20px;
-width: 370px;
-
-
+.container-login-page #flip:checked ~ .cover{
+  transform: rotateY(-180deg);
+}
+ .container-login-page .cover .front,
+ .container-login-page .cover .back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
-.container-imputs-fields input{
-
-	width: 250px;
-	margin-top: 10px;
-	border: 2px solid #F1F1FA;
-	background-color: #F1F1FA;
-	height: 44px;
-	width: 370;
-    border-radius: 5px;
-    box-shadow: 2px 2px #DBDBE9;
-
-
-	}
-
-.container-imputs-fields p{
-	font-family: Arial, Helvetica, sans-serif;
-
+.container-login-page .form-content{
+height: 100%;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.top-icon{
-	margin-top: 60px;
-	float: left;
-	margin-left: 300px;
-	position: absolute;
-}
-
-.top-icon p{
-	padding-top: 100px;
-	float: left;
-	margin-left: 10px;
-	font-size: 22px;
-
-}
-
-.button-login{
-	font-size: 14px;
-	line-height: 20px;
-	font-weight: bold;
-	letter-spacing: .1em;
-	padding-top: 10px;
-
-}
-
-.button-login1{
-	border: 3px solid #5EAE66;
-	padding: 10px 30px;
-	color:white;
-	font-size: 14px;
-	line-height: 20px;
-	font-weight: bold;
-	letter-spacing: .1em;
-	margin-top: -100px;
-	display: inline block;
-}
-
-
-.button-login2{
-	border: 3px solid #5EAE66;
-	padding: 10px 30px;
-	color:white;
-	font-size: 14px;
-	line-height: 20px;
-	font-weight: bold;
-	letter-spacing: .1em;
-	margin-top: -200px;
-	display: inline block;
-}
-
-
-
+ }
 
 
 

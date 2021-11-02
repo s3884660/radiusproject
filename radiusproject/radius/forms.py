@@ -17,4 +17,3 @@ class CreateActivityForm(forms.Form):
     # tags - are they going to be an array of tags or a series of boolean values? Currently thinking an array,
     # but need to look into python a little more
     # todo - image upload
-    
