@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -34,10 +35,9 @@
   {# Assumes you setup the password_reset view in your URLconf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
-{% endblock %}
 
 <div class="top-icon">
-			<img src="img/frame-13.png" alt="Radius-Logo">  <! –– {# Add images to static folder #} ––>
+			<img src="{% static 'img/frame-13.png' %}" alt="Radius-Logo">
 		</div>
 		<div class="top-icon">
 			<p>Welcome Back!</p>
@@ -75,3 +75,6 @@
 	</span>
 	</div>
 </section>
+
+{% endblock %}
+
