@@ -83,3 +83,7 @@ def acitivty(request):
 # about page
 def about(request):
     return render(request, 'about.html')
+
+# history page
+def history(request):
+    return render(request, 'history.html')
