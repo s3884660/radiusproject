@@ -8,11 +8,6 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />   
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet'/>
 
     {% if title %}
     <title>RadiUS - {{ title }}</title>
@@ -22,6 +17,18 @@
 
     <!-- Favicon -->
     <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- JS -->
+    <script src="{% static 'app.js' %}"></script> 
+
+    <!-- MAP JS -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+
+    <!-- MAP CSS -->
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css'/>   
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet'/>
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -35,7 +42,7 @@
 
 </head>
 
-<body>
+<body onload="getLocation()">
     <div class="grid-main">
     {% block content %} {% endblock %}
       <!-- Javascript -->
