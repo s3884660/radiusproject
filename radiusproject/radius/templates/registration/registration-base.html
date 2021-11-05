@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% if title %}
+    <title>RadiUS - {{ title }}</title>
+    {% else %}
+    <title>RadiUS</title>
+    {% endif %}
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- JS -->
+    <script src="{% static 'app.js' %}"></script>
+
+    <!-- MAP JS -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+
+    <!-- MAP CSS -->
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css'/>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet'/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@100&display=swap');
+    </style>
+
+</head>
+
+<body onload="getLocation()">
+    <div class="grid-main">
+    {% block content %} {% endblock %}
+      <!-- Javascript -->
+<!--    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>-->
+<!--    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>-->
+<!--    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>-->
+<!--    <script src="{% static 'js/plugins/plugins.js' %}"></script>-->
+<!--    <script src="{% static 'js/active.js' %}"></script>-->
+    </div>
+</body>
+
+</html>

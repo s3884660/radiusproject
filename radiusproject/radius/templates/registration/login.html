@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends './registration-base.html' %}
 {% load static %}
 
 {% block content %}
@@ -39,46 +39,35 @@
 
 <!--Front end still WIP-->
 
-<div class="container-login-page">
-      <input type="checkbox" id="flip">
-      <div class="cover">
-        <div class="front">
-          <img src="{% static 'img/radius-map.png' %}" alt="Radius-Map">
+<body>
+  <div class="flex">
+    <div class="item">
+      <div class="flex-sizing">
+          <p class="logo-radius"> <img src="./img/frame-13.png" alt="alt text"></p>
+          <p style="font-size: 24px;">Welcome Back!</p>
+        <div class="form">
+          <label for="fname">Email</label><br>
+          <input type="text" class="email-icon" name="fname" value= "Enter Email"><br>
+          <label for="lname">Password</label><br>
+          <input type="text" class="password-icon" name="lname" value="Enter password">
         </div>
-        <div class="grid-column">
-          <div class="logo-icon">
-             <img src="{% static 'img/frame-13.png' %}" alt="Radius-Map">
-            <span class="text-2"></span>
-          </div>
-        </div>
-      </div>
-      <div class="forms">
-          <div class="form-content">
-            <div class="login-form">
-              <div class="title">Welcome Back!</div>
-            <form action="#">
-              <div class="input-boxes">
-                <div class="input-box">
-                  <i class="fas fa-envelope"></i>
-					<p>Email</p>
-                  <input type="text" placeholder="Enter email" required>
-                </div>
-                <div class="input-box">
-                  <i class="fas fa-lock"></i>
-					<p>Password</p>
-                  <input type="password" placeholder="Enter password" required>
-                </div>
-				<div class="button">
-                  <input type="submit" value="Sign Up">
-                </div>
-				  <div class="button">
-                  <input type="submit" value="Sign In">
-                </div>
-              </div>
-          </form>
+        <div class="button-login">
+          <button class="button button1">Sign Up</button>
+          <button class="button button2">Sign In</button>
         </div>
       </div>
+
+    </div>
+    <div class="flex">
+      <div class="map">
+        <div class="">
+        </div>
       </div>
+    </div>
+  </div>
+</body>
+
+</html>
 
 {% endblock %}
 
