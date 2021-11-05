@@ -112,7 +112,7 @@ nav ul>li:active{
     margin-right: auto;
     margin-top: 1%;
     margin-bottom:1%;
-    width: 97vw; 
+    width: 100%; 
     height: 35vw;
   }
 
@@ -205,6 +205,11 @@ nav ul>li:active{
         padding-right:3%; 
     }
 
+    #map { 
+        width: 100%; 
+        height: 27vw;
+    }
+
 }
 
 @media(min-width: 1008px){
@@ -214,9 +219,9 @@ nav ul>li:active{
     }
 
     #map { 
-        width: 93vw; 
+        width: 100%; 
         height: 35vw;
-      }
+    }
 }
 
 /*------- Main pages css ------ */
@@ -250,13 +255,14 @@ button:focus {
 form {
 	background-color: #FFFFFF;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
 	padding: 0 50px;
 	height: 100%;
 	text-align: center;
 }
+
 
 input {
 	background-color: #eee;
@@ -348,6 +354,21 @@ height: 100%;
   justify-content: space-between;
 }
  
+/* ------------- Create Activity page ------------- */
+
+.create_activity_form{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* ----- currently doesn't work  ----- */
+.create_map_container{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+
 
 
 
