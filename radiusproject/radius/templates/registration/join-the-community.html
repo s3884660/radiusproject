@@ -3,4 +3,48 @@
 
 {% block content %}
 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="flex">
+    <div class="item">
+      <div class="flex-sizing">
+          <p class="logo-radius"> <img src="{% static '/img/frame-13.png' %}" alt="alt text"></p>
+          <p style="font-size: 24px;">Welcome</p>
+          <p style="font-size: 24px;"><strong>Join The Community</strong></p>
+        <div class="form">
+            <label for="fname">Username<br>
+          <input type="text" class="email-icon" name="fname" value= "Enter a Username"><br>
+          <label for="fname">Email</label><br>
+          <input type="text" class="email-icon" name="fname" value= "Enter Email"><br>
+          <label for="lname">Password</label><br>
+          <input type="text" class="password-icon" name="lname" value="Enter password">
+        </div>
+        <div class="button-login">
+            <p style="font-size: 14px;">By clicking Sign Up, you agree to our <strong>and Conditions.</strong></p>
+          <button class="button button1">Sign Up</button>
+          <button class="button button2">Sign In</button>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="flex">
+      <div class="map">
+        <div class="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
 {% endblock %}

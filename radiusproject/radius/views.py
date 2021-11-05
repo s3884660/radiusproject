@@ -17,14 +17,44 @@ activities = [
         {
         'title': 'Activity 2',
         'description': 'Second post content',
-        'img' : 'logo_icon.png',
+        'img' : '',
         'date_posted': 'October 4, 2021'
     },
         {
         'title': 'Activity 3',
         'description': 'Third post content',
-        'img' : 'logo_icon.png',
+        'img' : '',
         'date_posted': 'October 4, 2021'
+    },
+            {
+        'title': 'Activity 4',
+        'description': 'Fourht post content',
+        'img' : '',
+        'date_posted': 'October 7, 2021'
+    },
+        {
+        'title': 'Activity 5',
+        'description': 'Fifth post content',
+        'img' : '',
+        'date_posted': 'October 4, 2021'
+    },
+        {
+        'title': 'Activity 6',
+        'description': 'Sixth post content',
+        'img' : '',
+        'date_posted': 'October 4, 2021'
+    },
+        {
+        'title': 'Activity 7',
+        'description': 'Seventh post content',
+        'img' : '',
+        'date_posted': 'October 4, 2021'
+    },
+            {
+        'title': 'Activity 8',
+        'description': 'Eight post content',
+        'img' : '',
+        'date_posted': 'October 7, 2021'
     }
 ]
 
