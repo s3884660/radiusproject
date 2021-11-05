@@ -7,10 +7,13 @@
   justify-content: center;
 }
 
+.cover {
+	background: url('/radiusproject/static/img/radius-map.png');
+}
+
 body {
   margin: 0px;
   font-family: Arial;
-  background-image: url('{% static '/img/frame-13.png' %}');
 }
 
 .flex-sizing {
@@ -34,7 +37,7 @@ body {
 }
 
 .map {
-  background-image: url( '/radiusproject/static/img/background.png');
+  background-image: url('/radiusproject/static/img/radius-map.png');
   background-repeat: no-repeat;
   padding: 50px 100px 50px 50px;
   border-radius: 0px 8px 8px 0px;

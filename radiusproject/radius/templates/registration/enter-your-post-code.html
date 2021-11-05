@@ -3,4 +3,40 @@
 
 {% block content %}
 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="flex">
+    <div class="item">
+      <div class="flex-sizing">
+          <p class="logo-radius"> <img src="{% static '/img/frame-13.png' %}" alt="alt text"></p>
+        <div class="form">
+          <label for="fname">Enter your post code<br>
+          <input type="text" class="email-icon" name="fname" value= "eg. 7250"><br>
+          <label for="lname">Add counter here</label><br>
+          <input type="text" class="password-icon" name="lname" value="Enter password">
+        </div>
+        <div class="button-login">
+          <button class="button-avatar-continue">Continue</button>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="map">
+        <div class="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
 {% endblock %}
