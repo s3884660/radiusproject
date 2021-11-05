@@ -3,4 +3,46 @@
 
 {% block content %}
 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="flex">
+    <div class="item">
+      <div class="flex-sizing">
+          <p class="logo-radius"> <img src="{% static '/img/frame-13.png' %}" alt="alt text"></p>
+          <p style="font-size: 24px;">Select an avatar</p>
+          <div class="button-avatar">
+            <button class="button button-avatar" type="submit"><img src="./img/avatar1.png" width="100px" height="100px"></button>
+            <button class="button button-avatar" type="submit" ><img src="./img/avatar2.png" width="100px" height="100px"></button>
+            <button class="button button-avatar" type="submit"><img src="./img/avatar3.png" width="100px" height="100px"></button>
+            <button class="button button-avatar" type="submit"><img src="./img/avatar4.png" width="100px" height="100px"></button>
+            <button class="button button-avatar" type="submit"><img src="./img/avatar5.png" width="100px" height="100px"></button>
+            <button class="button button-avatar" type="submit"><img src="./img/avatar6.png" width="100px" height="100px"></button>
+            <button class="button button-avatar" type="submit"><img src="./img/avatar7.png" width="100px" height="100px"></button>
+            <button class="button button-avatar" type="submit"><img src="./img/avatar8.png" width="100px" height="100px"></button>
+          </div>
+        <div class="button-login">
+          <button class="button button-avatar-continue">Continue</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex">
+      <div class="map">
+        <div class="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
 {% endblock %}

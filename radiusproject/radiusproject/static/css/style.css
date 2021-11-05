@@ -363,48 +363,6 @@ input {
 /* ------------- Sign in pages ------------- */
 
 
-.container-login-page{
-    position: relative;
-  max-width: 850px;
-  width: 100%;
-  background: #fff;
-  padding: 40px 30px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  perspective: 2700px;
-}
-
-.container-login-page .cover{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  width: 50%;
-  z-index: 98;
-  transition: all 1s ease;
-  transform-origin: left;
-  transform-style: preserve-3d;
-}
-
-.container-login-page #flip:checked ~ .cover{
-  transform: rotateY(-180deg);
-}
- .container-login-page .cover .front,
- .container-login-page .cover .back{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.container-login-page .form-content{
-height: 100%;
-  width: 100%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
  
 /* ------------- Create Activity page ------------- */
 
