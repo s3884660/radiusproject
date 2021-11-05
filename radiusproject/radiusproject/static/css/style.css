@@ -100,10 +100,10 @@ nav ul>li a {
     text-decoration: initial;
 }
 
-nav ul>li:hover,
-nav ul>li:focus,
-nav ul>li:active{
-  background-color: var(--clr-lightGreen2);
+nav ul>li a:hover,
+nav ul>li a:focus,
+nav ul>li a:active{
+    color: var(--clr-darkGreen);
 }
 
 /* ------------- Map -------------*/
@@ -237,9 +237,18 @@ button {
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+    cursor:pointer;
 }
 
-button:active {
+nav ul>li button{
+    text-transform:none;
+    font-size: 14px;
+    font-weight:600;
+    padding: 12px 20px;
+}
+
+button:active,
+button:hover {
 	transform: scale(0.95);
 }
 
