@@ -6,67 +6,11 @@ from django.forms import ModelForm
 from django.views import generic
 from .models import Activity
 
-
-#test activities
-activities = [
-    {
-        'title': 'Activity 1',
-        'description': 'First post content',
-        'img' : 'logo_icon.png',
-        'date_posted': 'October 4, 2021'
-    },
-        {
-        'title': 'Activity 2',
-        'description': 'Second post content',
-        'img' : '',
-        'date_posted': 'October 4, 2021'
-    },
-        {
-        'title': 'Activity 3',
-        'description': 'Third post content',
-        'img' : '',
-        'date_posted': 'October 4, 2021'
-    },
-            {
-        'title': 'Activity 4',
-        'description': 'Fourht post content',
-        'img' : '',
-        'date_posted': 'October 7, 2021'
-    },
-        {
-        'title': 'Activity 5',
-        'description': 'Fifth post content',
-        'img' : '',
-        'date_posted': 'October 4, 2021'
-    },
-        {
-        'title': 'Activity 6',
-        'description': 'Sixth post content',
-        'img' : '',
-        'date_posted': 'October 4, 2021'
-    },
-        {
-        'title': 'Activity 7',
-        'description': 'Seventh post content',
-        'img' : '',
-        'date_posted': 'October 4, 2021'
-    },
-            {
-        'title': 'Activity 8',
-        'description': 'Eight post content',
-        'img' : '',
-        'date_posted': 'October 7, 2021'
-    }
-]
-
-
 #views
 
 def index(request):
-    context = {
-        'activities': activities
-    }
-    return render(request, 'index.html', context)
+    activities = Activity.objects.all()
+    return render(request, 'index.html', {'activities' :activities})
 
 
 def signin(request):
