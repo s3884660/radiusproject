@@ -78,7 +78,7 @@ class ActivityDetailView(generic.DetailView):
     model = Activity
 
 
-class ActivityModelForm(ModelForm):
-    class Meta:
-        model = Activity
-        fields = '__all__'
+class ActivityCreation(generic.edit.CreateView):
+    model = Activity
+    fields = '__all__'
+    template_name = 'testactivitycreate.html'
