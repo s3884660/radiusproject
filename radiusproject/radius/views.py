@@ -66,8 +66,9 @@ def history(request):
     return render(request, 'history.html')
 
 # history page
-def favourites(request):
-    return render(request, 'favourites.html')
+class Favourites(generic.ListView):
+    model = Activity
+    template_name = 'favourites.html'
 
 class ActivityListView(generic.ListView):
     model = Activity
