@@ -3,40 +3,45 @@
 
 {% block content %}
 <main>
+	
 	<!-- temporary using css container and form- container-->
 	<div class="create_activity_form" id="create_activity_form">
 		
 		<form action="#">	
-
 			<h1>Create Activity</h1>
 			<h4>Title</h4>
-			<input type="title" placeholder="Enter activity title" />
+			<input type="name" placeholder="Enter activity title" />
+			<h4>Activity Image</h4>
+			<input type="file" placeholder="Upload Activity Image">
 			<h4>Description</h4>
 			<input type="description" placeholder="Enter activity description" />
 			<!-- TODO include geo map for address--><!-- Image upload-->
 			<h4>Address</h4>
 			<!-- TODO MAPBOX external html input for address + pin-->
-			
 			<input type="address" placeholder="Enter activity address (e.g 54 Hillcrest Rd, Mowbray, TAS, 7250)" />
-			
-			
-			<!-- TODO Date and Time-->
 			<h4>Date</h4>
 			<input type="date" placeholder="Date" />
 			<h4>Time</h4>
 			<input type="time" placeholder="Time" />
 			<!--TODO tags -->
 			<h4>Tags</h4>
-			
+			<div class="tags_container">
+				<ul class="ks-cboxtags">
+				  <li><input type="checkbox" id="checkboxOne" value="outisde"><label for="checkboxOne">Outside</label></li>
+				  <li><input type="checkbox" id="checkboxTwo" value="inside" ><label for="checkboxTwo">Inside</label></li>
+				  <li><input type="checkbox" id="checkboxThree" value="community" ><label for="checkboxThree">Community</label></li>
+				</ul>
+			</div>
+			<div>
+				<img src="{% static 'img/upload-image.png' %}" alt="Radius-Map">
+				<div class="create_map_conatiner" id="create_map_container">
+				{% include 'partials/maps.html' %}
+				</div>
+			</div>
 			<br>
 			<button>Submit Activity</button>
+			<br>
 		</form>
-		<div>
-			<img src="{% static 'img/upload-image.png' %}" alt="Radius-Map">
-			<div class="create_map_conatiner" id="create_map_container">
-			{% include 'partials/maps.html' %}
-			</div>
-		</div>
 		
 	</div>
 </main>
