@@ -25,4 +25,7 @@ function signUp() {
 window.location.href = "/signup"
 }
 
+function createActivity() {
+  window.location.href = "/activity/create"
+}
 
