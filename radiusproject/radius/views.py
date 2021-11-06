@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, Http404
 from .forms import *
+from django.forms import ModelForm
 from django.views import generic
 from .models import Activity
 
@@ -120,6 +121,7 @@ def about(request):
 def history(request):
     return render(request, 'history.html')
 
+
 class ActivityListView(generic.ListView):
     model = Activity
 
@@ -127,3 +129,8 @@ class ActivityListView(generic.ListView):
 class ActivityDetailView(generic.DetailView):
     model = Activity
 
+
+class ActivityModelForm(ModelForm):
+    class Meta:
+        model = Activity
+        fields = '__all__'

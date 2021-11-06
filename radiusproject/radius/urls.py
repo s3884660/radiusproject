@@ -18,4 +18,5 @@ urlpatterns = [
     path('about', views.about),
     path('activities/', views.ActivityListView.as_view(), name='activities'),
     path('activities/<str:pk>', views.ActivityDetailView.as_view(), name='activity-detail'),
+    path('activity/test', views.ActivityModelForm, name='activity-test')
 ]

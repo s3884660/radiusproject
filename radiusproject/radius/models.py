@@ -24,6 +24,8 @@ class Activity(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4,
                           help_text='Activity Key')
     datetime = models.DateTimeField(default=datetime.datetime.now())
+    longitude = models.FloatField(default=151.7420)
+    latitude = models.FloatField(default=-33.871846)
 
     def __str__(self):
         """String for representing the Model object."""
