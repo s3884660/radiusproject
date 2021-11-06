@@ -5,6 +5,7 @@ from .forms import *
 from django.forms import ModelForm
 from django.views import generic
 from .models import Activity
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 #views
 
@@ -78,8 +79,8 @@ class ActivityDetailView(generic.DetailView):
     model = Activity
 
 
-
-class ActivityCreation(generic.edit.CreateView):
+class ActivityCreation(LoginRequiredMixin, generic.edit.CreateView):
+    login_url = ''
     model = Activity
     fields = '__all__'
     template_name = 'create-activity-page.html'
