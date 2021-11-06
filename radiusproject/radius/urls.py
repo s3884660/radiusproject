@@ -14,6 +14,7 @@ urlpatterns = [
     path('signup', views.signup),
     path('create', views.create_activity),
     path('activity', views.activity),
+    path('favourites', views.favourites),
     path('history', views.history),
     path('about', views.about),
     path('activities/', views.ActivityListView.as_view(), name='activities'),
