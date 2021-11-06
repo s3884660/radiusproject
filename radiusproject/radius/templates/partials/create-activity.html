@@ -7,14 +7,15 @@
 	<!-- temporary using css container and form- container-->
 	<div class="create_activity_form" id="create_activity_form">
 		
-		<form action="#">	
+		<form action="" method="post">
+			{% csrf_token %}
 			<h1>Create Activity</h1>
 			<h4>Title</h4>
-			<input type="name" placeholder="Enter activity title" />
+			{{ form.name }}
 			<h4>Activity Image</h4>
 			<input type="file" placeholder="Upload Activity Image">
 			<h4>Description</h4>
-			<input type="description" placeholder="Enter activity description" />
+			{{ form.description }}
 			<!-- TODO include geo map for address--><!-- Image upload-->
 			<h4>Address</h4>
 			<!-- TODO MAPBOX external html input for address + pin-->
@@ -39,7 +40,7 @@
 				</div>
 			</div>
 			<br>
-			<button>Submit Activity</button>
+			<input type="submit" value="Submit">
 			<br>
 		</form>
 		

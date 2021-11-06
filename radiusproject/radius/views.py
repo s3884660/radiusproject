@@ -78,7 +78,8 @@ class ActivityDetailView(generic.DetailView):
     model = Activity
 
 
+
 class ActivityCreation(generic.edit.CreateView):
     model = Activity
     fields = '__all__'
-    template_name = 'testactivitycreate.html'
+    template_name = 'create-activity-page.html'
