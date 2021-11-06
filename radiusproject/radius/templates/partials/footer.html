@@ -1,21 +1,33 @@
 {% load static %}
-
-<!-- Footer -->
-<footer class="footer-area">
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
-                <!-- Footer Social Info -->
-                <div class="footer-social-info text-right">
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </div>
-                <!-- Footer Logo -->
-                <div class="footer-logo">
-                    <a href="{% url 'index' %}"><img src="{% static 'img/logo-1.png' %}" alt=""></a>
-                </div>
+<footer>
+    <div class="footer_container">
+            <div class="footer_links">
+                <div><h3>Services</h3>
+                <ul>
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Link2</a></li>
+                    <li><a href="#">Link3</a></li>
+                </ul></div>
+                <div><h3>About</h3>
+                <ul>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul></div>
+                <div><h3>Careers</h3>
+                <ul>
+                    <li><a href="#">Job openings</a></li>
+                    <li><a href="#">Employee success</a></li>
+                    <li><a href="#">Benefits</a></li>
+                </ul></div>
+            </div>
+            <div class="footer_social">
+                <a href="{% url 'index' %}"><img src="{% static 'img/logo_icon.png' %}" alt=""></a>
+                <p class="copyright">RadiUS © 2021</p>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
 </footer>
-<!-- Footer End -->
