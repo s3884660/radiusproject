@@ -21,4 +21,8 @@ function showPosition(position) {
   });
 }
 
+function signUp() {
+window.location.href = "/signup"
+}
+
 

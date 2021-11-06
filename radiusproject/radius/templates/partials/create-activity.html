@@ -19,13 +19,18 @@
 			<!-- TODO include geo map for address--><!-- Image upload-->
 			<h4>Address</h4>
 			<!-- TODO MAPBOX external html input for address + pin-->
-			<input type="address" placeholder="Enter activity address (e.g 54 Hillcrest Rd, Mowbray, TAS, 7250)" />
+			{{ form.address }}
+			<h4>Longitude</h4>
+			{{ form.longitude }}
+			<h4>Latitude</h4>
+			{{ form.latitude }}
 			<h4>Date</h4>
-			<input type="date" placeholder="Date" />
+			{{ form.datetime }}
 			<h4>Time</h4>
-			<input type="time" placeholder="Time" />
 			<!--TODO tags -->
 			<h4>Tags</h4>
+			{{ form.tags }}
+			<!-- Commenting out the nice checkboxes, sorry :(
 			<div class="tags_container">
 				<ul class="ks-cboxtags">
 				  <li><input type="checkbox" id="checkboxOne" value="outisde"><label for="checkboxOne">Outside</label></li>
@@ -33,6 +38,7 @@
 				  <li><input type="checkbox" id="checkboxThree" value="community" ><label for="checkboxThree">Community</label></li>
 				</ul>
 			</div>
+			-->
 			<div>
 				<img src="{% static 'img/upload-image.png' %}" alt="Radius-Map">
 				<div class="create_map_conatiner" id="create_map_container">
