@@ -3,9 +3,6 @@
 
 {% block content %}
 
-{% if form.errors %}
-<p xmlns="http://www.w3.org/1999/html">Your username and password didn't match. Please try again.</p>
-{% endif %}
 
 <!--  {% if next %}-->
 <!--    {% if user.is_authenticated %}-->
@@ -48,10 +45,15 @@
                     <div class="form">
                         <label for="lname">Email</label><br>
                         <input id="icon" value="{{ form.username }}">
-<!--                        {{ form.username }}-->
+                        <!--                        {{ form.username }}-->
                         <label for="lname">Password</label><br>
                         <input id="icon2" value="{{ form.password }}">
-<!--                        {{ form.password }}-->
+                        <!--                        {{ form.password }}-->
+
+                        {% if form.errors %}
+                        <p xmlns="http://www.w3.org/1999/html" style="font-size: 12px; color: #A162F2"><strong>Your username and password didn't match. Please try
+                            again.</strong></p>
+                        {% endif %}
                     </div>
                     <div class="button-login">
                         <button class="button button1" onclick="signUp()">Sign Up</button>
@@ -71,5 +73,5 @@
     </body>
 
 
-{% endblock %}
+    {% endblock %}
 
