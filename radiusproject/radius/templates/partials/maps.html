@@ -1,33 +1,31 @@
     <div id='map'></div>
-    
+
     <script>
-        var longitude = {{ activity.longitude|default:99.217140 }}
-        var latitude = {{ activity.latitude|default:-33.871846 }}
     mapboxgl.accessToken = 'pk.eyJ1IjoiamFjb3BvZ3JhYmFyIiwiYSI6ImNrdWl5YmlxZzB3cGIycG14bWV2cG81dXEifQ.usbYmuIAIlQVY4Spwk7aww'; 
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/jacopograbar/ckuiygwp15r4m17qmlagfxrw9', 
-      center: [longitude, latitude],
+      center: [151.2251483, -33.8661344],
       zoom: 12
     });
-    
-    // Add an event listener that runs when a user clicks on the map element.
-    map.on('click', ({ point }) => {
-    // If the user clicked on one of your markers, get its information.
-    const features = map.queryRenderedFeatures(point, {layers: ['sydney-activities']});
-    if (!features.length) {
-    return;
-    }
-    const feature = features[0];
+    </script>
 
-    //Create a popup, specify its options and properties, and add it to the map.
-    const popup = new mapboxgl.Popup({ offset: [0, -15] })
-    .setLngLat(feature.geometry.coordinates)
-    .setHTML(
-    `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
-    )
-    .addTo(map);
-    });
+    {% if activities %}
+      {% for activity in activities %}
+      <script>
+        var activityLongitude = {{ activity.longitude}};
+        var activityLatitude = {{ activity.latitude}};
+        var activityCoordinates = [activityLongitude, activityLatitude];
+        var activityTitle = "{{activity.name}}" ;
+        var activityTags = "{{activity.tags.all|join:', '}}";
+        var activityAddress = "{{activity.address}}";
+        addMarkers(activityCoordinates, activityTitle, activityTags, activityAddress);
+      </script>
+      {% endfor %}
+    {% endif %}
+
+
+   <script>
 
     //geocoder
     const geocoder = new MapboxGeocoder({

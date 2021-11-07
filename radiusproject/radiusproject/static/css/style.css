@@ -114,7 +114,25 @@ nav ul>li a:active{
     margin-bottom:1%;
     width: 100%; 
     height: 35vw;
-  }
+}
+
+.marker {
+    background-image: url("../img/marker-editor.svg");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+  
+.mapboxgl-popup-content {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
 
 /* ------------- Homepage Hover Boxes -------------*/
 
