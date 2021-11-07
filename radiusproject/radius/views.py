@@ -78,9 +78,26 @@ class ActivityListView(generic.ListView):
 class ActivityDetailView(generic.DetailView):
     model = Activity
 
+#
+#class ActivityCreation(LoginRequiredMixin, generic.edit.CreateView):
+#    login_url = ''
+#    model = Activity
+#    fields = '__all__'
+#    template_name = 'create-activity-page.html'
 
-class ActivityCreation(LoginRequiredMixin, generic.edit.CreateView):
-    login_url = ''
-    model = Activity
-    fields = '__all__'
-    template_name = 'create-activity-page.html'
+
+def create_activity(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = CreateActivity(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/thanks/')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = CreateActivity()
+
+    return render(request, 'create-activity-page.html', {'form': form})

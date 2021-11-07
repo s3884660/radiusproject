@@ -1,4 +1,7 @@
 from django import forms
+from django.forms import ModelForm
+from .models import Activity
+
 
 
 class SignUpForm(forms.Form):
@@ -17,3 +20,9 @@ class CreateActivityForm(forms.Form):
     # tags - are they going to be an array of tags or a series of boolean values? Currently thinking an array,
     # but need to look into python a little more
     # todo - image upload
+
+
+class CreateActivity(ModelForm):
+    class Meta:
+        model = Activity
+        fields = '__all__'

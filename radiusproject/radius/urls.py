@@ -19,5 +19,5 @@ urlpatterns = [
     path('about', views.about),
     path('activities/', views.ActivityListView.as_view(), name='activities'),
     path('activities/<str:pk>', views.ActivityDetailView.as_view(), name='activity-detail'),
-    path('activity/create', views.ActivityCreation.as_view(), name='activity-creation')
+    path('activity/create', views.create_activity, name='activity-creation')
 ]

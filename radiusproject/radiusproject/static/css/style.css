@@ -391,6 +391,9 @@ form {
 	text-align: center;
 }
 
+.hidden {
+    display: none;
+}
 
 input {
 	background-color: #eee;
