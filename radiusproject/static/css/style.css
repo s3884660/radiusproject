@@ -171,7 +171,7 @@ nav ul>li a:active{
 
 .activity_container_ext {
     position: relative;
-    width: 25%;
+    width: 75%;
   }
 
 .overlay_img_ext {
@@ -204,14 +204,14 @@ nav ul>li a:active{
     justify-self: center;
 }
 
-.activityList_ext{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.activityList_ext {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
     align-content: space-between;
     gap: 10px 20px;
+    justify-content: space-evenly;
 }
 
 /* ------------- RWD styling -------------*/
