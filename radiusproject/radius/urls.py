@@ -20,5 +20,6 @@ urlpatterns = [
     path('activities/', views.ActivityListView.as_view(), name='activities'),
     path('activities/<str:pk>', views.ActivityDetailView.as_view(), name='activity-detail'),
     path('activity/create', views.create_activity, name='activity-creation'),
-    path('longlat', views.longlat, name='longlattest')
+    path('longlat', views.longlat, name='longlattest'),
+    path('avatar', views.avatar),
 ]

@@ -104,3 +104,8 @@ def longlat(request):
         'activity_list': activity_list
     }
     return render(request, 'longlat.html', context)
+
+
+def avatar(request):
+    return render(request, 'select-an-avatar.html')
+#WIP
