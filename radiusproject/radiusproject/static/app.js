@@ -11,7 +11,7 @@ function getLocation() {
 function showPosition(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
-  
+
   //updates location of map to current user's location (if permission granted)
   map.flyTo({
     center: [longitude, latitude],

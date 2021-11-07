@@ -1,0 +1,13 @@
+<div id='map'></div>
+
+<script>
+    var tempLat = {{activity.latitude|default:-33.8661344}};
+    var tempLong = {{activity.longitude|default:151.2251483}};
+  mapboxgl.accessToken = 'pk.eyJ1IjoiamFjb3BvZ3JhYmFyIiwiYSI6ImNrdWl5YmlxZzB3cGIycG14bWV2cG81dXEifQ.usbYmuIAIlQVY4Spwk7aww'; 
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/jacopograbar/ckuiygwp15r4m17qmlagfxrw9', 
+    center: [tempLong, tempLat],
+    zoom: 12
+  });
+</script>
