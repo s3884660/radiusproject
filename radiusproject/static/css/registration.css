@@ -7,13 +7,14 @@
   justify-content: center;
 }
 
-.cover {
-	background: url('/radiusproject/static/img/radius-map.png');
-}
+/*.cover {*/
+/*	background-image: url(/radiusproject/static/img/radius-map.png);*/
+/*}*/
 
 body {
   margin: 0px;
   font-family: Arial;
+
 }
 
 .flex-sizing {
@@ -26,7 +27,7 @@ body {
 
 
 .item {
-  background: #f7f7f7;
+  /*background: url(./static/img/background.png) no-repeat top center fixed;*/
   border: 1px solid #e7e7e7;
   padding: 50px;
   border-radius: 8px;
@@ -37,7 +38,7 @@ body {
 }
 
 .map {
-  background-image: url('/radiusproject/static/img/radius-map.png');
+   background-image: url(/radiusproject/static/img/radius-map.png);
   background-repeat: no-repeat;
   padding: 50px 100px 50px 50px;
   border-radius: 0px 8px 8px 0px;
@@ -138,3 +139,14 @@ padding-bottom: 30px;
 
 }
 
+.icon{
+    background-image:url(radiusproject/static/img/mail.png);
+    background-repeat: no-repeat;
+    background-position: 2px 3px;
+}
+
+.icon2{
+    background-image:url(radiusproject/static/img/mail.png);
+    background-repeat: no-repeat;
+    background-position: 2px 3px;
+}

@@ -7,9 +7,9 @@
   justify-content: center;
 }
 
-/*.cover {*/
-/*	background-image: url(/radiusproject/static/img/radius-map.png);*/
-/*}*/
+.cover {
+	background-image: url("../img/background.png");
+}
 
 body {
   margin: 0px;
@@ -27,7 +27,7 @@ body {
 
 
 .item {
-  /*background: url(./static/img/background.png) no-repeat top center fixed;*/
+background-color: #Ffffff;
   border: 1px solid #e7e7e7;
   padding: 50px;
   border-radius: 8px;
@@ -38,7 +38,7 @@ body {
 }
 
 .map {
-   background-image: url(/radiusproject/static/img/radius-map.png);
+  background-image: url("../img/radius-map.png");
   background-repeat: no-repeat;
   padding: 50px 100px 50px 50px;
   border-radius: 0px 8px 8px 0px;

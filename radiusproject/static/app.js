@@ -11,9 +11,7 @@ function getLocation() {
 function showPosition(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
-  //just for debug
-  x.innerHTML = "Latitude: " + latitude + 
-  "<br>Longitude: " + longitude;
+
   //updates location of map to current user's location (if permission granted)
   map.flyTo({
     center: [longitude, latitude],
@@ -21,4 +19,26 @@ function showPosition(position) {
   });
 }
 
+function addMarkers(coordinates,title,tags,address) {
+  const el = document.createElement('div');
+  el.className = 'marker';
+
+  new mapboxgl.Marker(el)
+  .setLngLat(coordinates)
+  .setPopup(
+    new mapboxgl.Popup({ offset: 25 }) // add popups
+      .setHTML(
+        "<h3>"+title+"</h3><Address:>Tags: "+tags+"<br>Address: "+address+"</p>"
+      )
+  )
+  .addTo(map);
+}
+
+function signUp() {
+window.location.href = "/signup"
+}
+
+function createActivity() {
+  window.location.href = "/activity/create"
+}
 
