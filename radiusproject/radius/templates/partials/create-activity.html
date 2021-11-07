@@ -5,10 +5,11 @@
 <main>
 	
 	<!-- temporary using css container and form- container-->
-	<div class="create_activity_form" id="create_activity_form">
+	<div class="create_activity_form_outer" >
 		
-		<form action="" method="post">
+		<form class="create_activity_form" action="" method="post">
 			{% csrf_token %}
+			<div>
 			<h1>Create Activity</h1>
 			<h4>Title</h4>
 			{{ form.name }}
@@ -39,6 +40,7 @@
 				</ul>
 			</div>
 			-->
+			</div>
 			<div>
 				<img src="{% static 'img/upload-image.png' %}" alt="Radius-Map">
 				<div class="create_map_conatiner" id="create_map_container">
