@@ -94,7 +94,7 @@ def create_activity(request):
         # check whether it's valid:
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/thanks/')
+            return HttpResponseRedirect('/activities/')
 
     # if a GET (or any other method) we'll create a blank form
     else:
