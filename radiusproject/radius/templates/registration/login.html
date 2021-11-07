@@ -43,12 +43,10 @@
                     <p class="logo-radius"><img src="{% static '/img/frame-13.png' %}" alt="alt text"></p>
                     <p style="font-size: 24px; color: #91919F; font-family: 'DM Sans' ">Welcome Back!</p>
                     <div class="form">
-                        <label for="lname" style="color: #161719; font-family: 'DM Sans'">Email</label><br>
+                        <label style="color: #161719; font-family: 'DM Sans'">Email</label><br>
                         <input style="color:#91919F; font-family: 'DM Sans'" id="icon" value="{{ form.username }}">
-                        <!--                        {{ form.username }}-->
-                        <label for="lname" style="color: #161719; font-family: 'DM Sans'">Password</label><br>
+                        <label style="color: #161719; font-family: 'DM Sans'">Password</label><br>
                         <input style="color:#91919F; font-family: 'DM Sans'" id="icon2" value="{{ form.password }}">
-                        <!--                        {{ form.password }}-->
 
                         {% if form.errors %}
                         <p xmlns="http://www.w3.org/1999/html" style="font-size: 12px; color: #A162F2"><strong>Your username and password didn't match. Please try
