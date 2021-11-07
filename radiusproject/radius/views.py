@@ -48,11 +48,6 @@ def default_map(request):
                   {'mapbox_access_token': mapbox_access_token})
 
 
-# create activity
-def create_activity(request):
-    return render(request, 'create-activity-page.html')
-
-
 # activity page
 def activity(request):
     return render(request, 'activity-page.html')
@@ -101,3 +96,11 @@ def create_activity(request):
         form = CreateActivity()
 
     return render(request, 'create-activity-page.html', {'form': form})
+
+
+def longlat(request):
+    activity_list = Activity.objects.all()
+    context = {
+        'activity_list': activity_list
+    }
+    return render(request, 'longlat.html', context)
