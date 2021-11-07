@@ -140,3 +140,14 @@ padding-bottom: 30px;
 
 }
 
+.icon{
+    background-image:url(radiusproject/static/img/mail.png);
+    background-repeat: no-repeat;
+    background-position: 2px 3px;
+}
+
+.icon2{
+    background-image:url(radiusproject/static/img/mail.png);
+    background-repeat: no-repeat;
+    background-position: 2px 3px;
+}

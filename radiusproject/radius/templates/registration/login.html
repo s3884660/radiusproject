@@ -46,9 +46,12 @@
                     <p class="logo-radius"><img src="{% static '/img/frame-13.png' %}" alt="alt text"></p>
                     <p style="font-size: 24px;">Welcome Back!</p>
                     <div class="form">
-                        {{ form.username }}
+                        <label for="lname">Email</label><br>
+                        <input id="icon" value="{{ form.username }}">
+<!--                        {{ form.username }}-->
                         <label for="lname">Password</label><br>
-                        {{ form.password }}
+                        <input id="icon2" value="{{ form.password }}">
+<!--                        {{ form.password }}-->
                     </div>
                     <div class="button-login">
                         <button class="button button1" onclick="signUp()">Sign Up</button>
