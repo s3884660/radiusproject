@@ -134,7 +134,7 @@ padding-bottom: 30px;
   height: 50px;
   width: 370px;
   display: inline-block;
-  font-family: "DM Sans"
+  font-family: "DM Sans";
   font-size: 18px;
   border-style: solid;
   cursor: pointer;
@@ -142,13 +142,13 @@ padding-bottom: 30px;
 }
 
 .icon{
-    background-image:url(radiusproject/static/img/mail.png);
+    background-image: url("../img/mail.png");
     background-repeat: no-repeat;
     background-position: 2px 3px;
 }
 
 .icon2{
-    background-image:url(radiusproject/static/img/mail.png);
+    background-image:url("../img/pw.png");
     background-repeat: no-repeat;
     background-position: 2px 3px;
 }
