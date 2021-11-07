@@ -1,13 +1,27 @@
-<!--temp commented out{% extends "../base.html" %} as it doubles up the header for create-activity.html-->
+{% extends "../base.html" %}
 {% load static %}
 {% block content %}
-<h1>Name: {{ activity.name }}</h1>
 
-<p>Tags: {{ activity.tags.all|join:", " }}</p>
+<!-- not quite right-->
+<main>
+    <div class="activity_detail_container">
+        <div class="activity_detail_outer">
+            <div class="activity_detail_inner">
+                <h1>Name: {{ activity.name }}</h1>
+                <p>Tags: {{ activity.tags.all|join:", " }}</p>
+                <p>Description : {{ activity.description }}</p>
+                <p>Address : {{ activity.address }}</p>
+                <p>Time & Date : {{ activity.datetime }}</p>
+            </div>
+            <!-- can't quite get it to display right using another div-->
+            <div class="activity_detail_inner">
+            <img src="static/img/" alt="{{ activity.name }}" class="overlay_img_ext">
+            {% include '../partials/secondary_map.html' %}
+            </div>
+        </div>
+</div>
 
-<p>Description : {{ activity.description }}</p>
-<p>Address : {{ activity.address }}</p>
-<p>Time & Date : {{ activity.datetime }}</p>
+</main>
 
-{% include '../partials/secondary_map.html' %}
+
 {% endblock %}
