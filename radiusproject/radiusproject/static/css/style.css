@@ -371,8 +371,8 @@ footer ul a:hover {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #5EAE66;
-	background-color: #5EAE66;
+	border: 1px solid var(--clr-darkGreen);
+	background-color: var(--clr-darkGreen);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -414,6 +414,19 @@ input {
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
+}
+
+input[type=submit]{
+    border-radius: 20px;
+    border: 1px solid var(--clr-darkGreen);
+    background-color: var(--clr-darkGreen);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor:pointer;
 }
 
 .container {
