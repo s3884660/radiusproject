@@ -107,4 +107,4 @@ def longlat(request):
 
 
 def avatar(request):
-    return render(request, 'avatar.html')
+    return render(request, 'registration/avatar.html')

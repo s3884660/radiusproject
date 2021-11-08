@@ -45,4 +45,5 @@ class ActivityInstance(models.Model):
         """String for representing the Model object."""
         return f'{self.id} ({self.activity.name})'
 
-# Start of User profile account 
+# Start of User profile account
+
