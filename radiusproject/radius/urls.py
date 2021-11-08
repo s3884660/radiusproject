@@ -2,9 +2,11 @@ from django.urls import path, include
 from django.conf.urls import url
 from django.views.generic import RedirectView
 from . import views
+from .. import users
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('users/', include('users.urls')),
     path('', views.signin, name='signin'),
     path('maps/', views.default_map, name='maps'),
     path('accounts/', include('django.contrib.auth.urls')),
