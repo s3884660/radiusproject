@@ -44,3 +44,5 @@ class ActivityInstance(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.id} ({self.activity.name})'
+
+# Start of User profile account 
