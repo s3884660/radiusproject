@@ -1,27 +1,29 @@
 {% extends "../base.html" %}
-{% load static %}
+{% load static %} 
 {% block content %}
 
 <!-- not quite right-->
 <main>
-    <div class="activity_detail_container">
-        <div class="activity_detail_outer">
-            <div class="activity_detail_inner">
-                <h1>Name: {{ activity.name }}</h1>
-                <p>Tags: {{ activity.tags.all|join:", " }}</p>
-                <p>Description : {{ activity.description }}</p>
-                <p>Address : {{ activity.address }}</p>
-                <p>Time & Date : {{ activity.datetime }}</p>
-            </div>
-            <!-- can't quite get it to display right using another div-->
-            <div class="activity_detail_inner">
-            <img src="static/img/" alt="{{ activity.name }}" class="overlay_img_ext">
-            {% include '../partials/secondary_map.html' %}
-            </div>
-        </div>
-</div>
-
+  <div class="activity_detail_container">
+    <div class="activity_detail_outer">
+      <div class="activity_detail_inner">
+        <h1>Name: {{ activity.name }}</h1>
+        <p>Tags: {{ activity.tags.all|join:", " }}</p>
+        <p>Description : {{ activity.description }}</p>
+        <p>Address : {{ activity.address }}</p>
+        <p>Time & Date : {{ activity.datetime }}</p>
+      </div>
+      <!-- can't quite get it to display right using another div-->
+      <div class="activity_detail_inner">
+        <img
+          src="static/img/"
+          alt="{{ activity.name }}"
+          class="overlay_img_ext"
+        />
+        {% include '../partials/secondary_map.html' %}
+      </div>
+    </div>
+  </div>
 </main>
-
 
 {% endblock %}

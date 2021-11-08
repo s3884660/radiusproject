@@ -467,12 +467,26 @@ input[type=submit]{
 
 /* ------------- Sign in pages ------------- */
 
+/*-------------- About Page -----------------*/
 
+.about-heading{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
  
+.about-article{
+    
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 /* ------------- Create Activity page ------------- */
 
 .create-activity{
-    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
@@ -488,11 +502,10 @@ input[type=submit]{
                 0 10px 10px rgba(0,0,0,0.22);
     position: relative;
     overflow: hidden;
-    width: 75vw;
+    width: 95vw;
     max-width: 100%;
     min-height: 480px;
 }
-
 
 .create_activity_form{
     display: flex;
@@ -503,7 +516,7 @@ input[type=submit]{
     align-items: stretch;
 }
 
-/* ------------ activity -----------*/
+/* ------------ activity / activity-details page -----------*/
 
 .activity_detail_container{
     background-color: #fff;
@@ -519,12 +532,11 @@ input[type=submit]{
 }
 
 .activity_detail_outer{
-   display:flex;
-   flex-direction: row;
-
-}
-.activity_detail_inner{
     display:flex;
+    flex-direction: row;
+}
+
+.activity_detail_inner{
     flex-direction:column;
     max-width: 30vw;
     min-width: 33vw;
@@ -540,9 +552,11 @@ ul.ks-cboxtags {
     list-style: none;
     padding: 20px;
 }
+
 ul.ks-cboxtags li{
   display: inline;
 }
+
 ul.ks-cboxtags li label{
     display: inline-block;
     background-color: rgba(255, 255, 255, .9);
@@ -596,10 +610,12 @@ ul.ks-cboxtags li input[type="checkbox"]:checked + label {
 ul.ks-cboxtags li input[type="checkbox"] {
   display: absolute;
 }
+
 ul.ks-cboxtags li input[type="checkbox"] {
   position: absolute;
   opacity: 0;
 }
+
 ul.ks-cboxtags li input[type="checkbox"]:focus + label {
   border: 2px solid var(--clr-lightGreen);
 }

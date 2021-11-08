@@ -1,15 +1,81 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
 <!-- Navbar -->
 {% include 'partials/navbar.html' %}
 
 <!-- Main -->
 <!-- todo display static about radius info-->
-<h1>about page test</h1>
+<main>
 
+    <div class="about-heading">
+        <!-- logo image-->
+        <img src="{% static 'img/logo_icon.png' %}" alt="Radius-logo" />
+        <h1>About RadiUS</h1>
+    </div>
 
+    <article class="about-article">
+        
+            <div>
+                <p>
+                    RadiUS is a web-based application that aims to help users find various
+                    activities at home or within their vicinity/community. Due to covid
+                    people are limited to the distance they can travel until further
+                    restrictions are lifted. Using a RadiUs profile account, we aim to help
+                    filter activities based on the user's likes and interest.
+                </p>
+            </div>
+       
+
+     
+            
+                <div>
+                    <img src="{% static 'img/logo-1.png' %}" alt="Radius-logo" />
+                    <!-- image -->
+                    <div>
+                        <p>
+                            Using the geological range filters, we can help the user find
+                            activities that are closer to the users location.
+                        </p>
+                    </div>
+                </div>
+      
+
+        
+            <div>
+                <img src="{% static 'img/logo-1.png' %}" alt="Radius-logo" />
+                <!-- image -->
+                <div>
+                    <p>
+                        Users can also create activities and events through the use of a
+                        simple form.
+                    </p>
+                </div>
+            </div>
+       
+
+            <div>
+                <img src="{% static 'img/logo-1.png' %}" alt="Radius-logo" />
+                <!-- image -->
+                <div>
+                    <p>Users are able to track their favourite activities.</p>
+                </div>
+            </div>
+      
+            <div>
+                <img src="{% static 'img/logo-1.png' %}" alt="Radius-logo" />
+                <!-- image -->
+                <div>
+                    <p>
+                        These events could include but are not limited to: - Community-based
+                        events/activities e.g. social gatherings, farmers markets, community
+                        sporting events. - Business-based events/activities e.g. dining and
+                        cuisine events, ticketed events. - Suggested activities - Suggested
+                        movie nights, cooking and hobbies.
+                    </p>
+                </div>
+            </div>
+     
+    </article>
+</main>
 
 {% endblock %}

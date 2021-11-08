@@ -1,32 +1,29 @@
-{% load static %}
-{% block content %}
+{% load static %} {% block content %}
 <main>
-	
-	<!-- temporary using css container and form- container-->
-	<div class="create_activity_form_outer" >
-		
-		<form class="create_activity_form" action="" method="post">
-			{% csrf_token %}
-			<div class="create-activity">
-			<h1>Create Activity</h1>
-			<h4>Title</h4>
-			{{ form.name }}
-			<h4>Activity Image</h4>
-			<input type="file" placeholder="Upload Activity Image">
-			<h4>Description</h4>
-			{{ form.description }}
-			<!-- TODO include geo map for address--><!-- Image upload-->
-			<h4>Address</h4>
-			<!-- TODO MAPBOX external html input for address + pin-->
-			{{ form.address }}
-			<h4>Longitude</h4>
-			{{ form.longitude }}
-			<h4>Latitude</h4>
-			{{ form.latitude }}
-			<h4>Date</h4>
-			{{ form.datetime }}
-			<!--TODO tags -->
-			<!-- Commenting out the nice checkboxes, sorry :(
+  <!-- temporary using css container and form- container-->
+  <div class="create_activity_form_outer">
+    <form class="create_activity_form" action="" method="post">
+      {% csrf_token %}
+      <div class="create-activity">
+        <h1>Create Activity</h1>
+        <h4>Title</h4>
+        {{ form.name }}
+        <h4>Activity Image</h4>
+        <input type="file" placeholder="Upload Activity Image" />
+        <h4>Description</h4>
+        {{ form.description }}
+        <!-- TODO include geo map for address--><!-- Image upload-->
+        <h4>Address</h4>
+        <!-- TODO MAPBOX external html input for address + pin-->
+        {{ form.address }}
+        <h4>Longitude</h4>
+        {{ form.longitude }}
+        <h4>Latitude</h4>
+        {{ form.latitude }}
+        <h4>Date</h4>
+        {{ form.datetime }}
+        <!--TODO tags -->
+        <!-- Commenting out the nice checkboxes, sorry :(
 			<div class="tags_container">
 				<ul class="ks-cboxtags">
 				  <li><input type="checkbox" id="checkboxOne" value="outisde"><label for="checkboxOne">Outside</label></li>
@@ -35,22 +32,19 @@
 				</ul>
 			</div>
 			-->
-			</div>
-			<div>
-				<img src="{% static 'img/upload-image.png' %}" alt="Radius-Map">
-				<div class="create_map_conatiner" id="create_map_container">
-				{% include 'partials/secondary_map.html' %}
-				<h4>Tags</h4>
-				{{ form.tags }}
-				</div>
-			</div>
-			<div class="hidden">
-			{{ form.id }}
-			</div>
-			<input type="submit" value="Create">
-		</form>
-		
-	</div>
+      </div>
+      <div>
+        <img src="{% static 'img/upload-image.png' %}" alt="activity-image" />
+        <div class="create_map_conatiner" id="create_map_container">
+          {% include 'partials/secondary_map.html' %}
+          <h4>Tags</h4>
+          {{ form.tags }}
+        </div>
+      </div>
+      <div class="hidden">{{ form.id }}</div>
+      <input type="submit" value="Create" />
+    </form>
+  </div>
 </main>
 
 {% endblock %}
