@@ -24,3 +24,4 @@ class CreateActivity(ModelForm):
     class Meta:
         model = Activity
         fields = '__all__'
+        widgets = {'tags': forms.CheckboxSelectMultiple}
