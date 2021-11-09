@@ -26,6 +26,7 @@ class Activity(models.Model):
     datetime = models.DateTimeField(default=datetime.datetime.now())
     longitude = models.FloatField(default=151.7420)
     latitude = models.FloatField(default=-33.871846)
+    image = models.ImageField(upload_to='images/', default='noimage.jpg')
 
     def __str__(self):
         """String for representing the Model object."""
@@ -45,5 +46,6 @@ class ActivityInstance(models.Model):
         """String for representing the Model object."""
         return f'{self.id} ({self.activity.name})'
 
-# Start of User profile account
+
+
 
