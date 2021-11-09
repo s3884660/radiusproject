@@ -2,11 +2,13 @@
 {% if activities %}
     <div class="activityList">
         {% for activity in activities %}
+        {% if forloop.counter <= 8 %}
         <div class="activity_container">
         <img src="static/img/" alt="{{ activity.name }}" class="overlay_img">
                 <div class="activity_title">{{ activity.name }}</div>
                 <div class="overlay_description">{{ activity.description }}</div>
         </div>
+        {% endif %}
         {% endfor %}
 {% endif %}
 </div>

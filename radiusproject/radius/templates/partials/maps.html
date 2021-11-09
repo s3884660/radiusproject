@@ -14,15 +14,15 @@
 
    {% if activities %}
       {% for activity in activities %}
-      <script>
-        var activityLongitude = {{ activity.longitude}};
-        var activityLatitude = {{ activity.latitude}};
-        var activityCoordinates = [activityLongitude, activityLatitude];
-        var activityTitle = "{{activity.name}}" ;
-        var activityTags = "{{activity.tags.all|join:', '}}";
-        var activityAddress = "{{activity.address}}";
-        addMarkers(activityCoordinates, activityTitle, activityTags, activityAddress);
-      </script>
+        <script>
+          var activityLongitude = {{ activity.longitude}};
+          var activityLatitude = {{ activity.latitude}};
+          var activityCoordinates = [activityLongitude, activityLatitude];
+          var activityTitle = "{{activity.name}}" ;
+          var activityTags = "{{activity.tags.all|join:', '}}";
+          var activityAddress = "{{activity.address}}";
+          addMarkers(activityCoordinates, activityTitle, activityTags, activityAddress);
+        </script>
       {% endfor %}
     {% endif %}
 
