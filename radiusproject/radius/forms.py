@@ -1,11 +1,12 @@
 from django import forms
 from django.forms import ModelForm
 from .models import Activity
+from django.contrib.auth.models import User
 
-class SignUpForm(forms.Form):
-    username = forms.CharField(help_text="Enter a Username")
-    email = forms.EmailField(help_text="Enter Email")
-    password = forms.CharField(help_text="Enter Password", widget=forms.PasswordInput)
+# class SignUpForm(forms.Form):
+#     username = forms.CharField(help_text="Enter a Username")
+#     email = forms.EmailField(help_text="Enter Email")
+#     password = forms.CharField(help_text="Enter Password", widget=forms.PasswordInput)
 
 
 # class CreateActivityForm(forms.Form):
@@ -25,3 +26,9 @@ class CreateActivity(ModelForm):
         model = Activity
         fields = '__all__'
         widgets = {'tags': forms.CheckboxSelectMultiple}
+
+
+class SignUpForm(forms.Form):
+    class Meta:
+        model = User
+        fields = '__all__'

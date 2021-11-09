@@ -6,6 +6,8 @@ from django.forms import ModelForm
 from django.views import generic
 from .models import Activity
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
 
 #views
 
@@ -24,17 +26,10 @@ def login(request):
 
 
 # signup
-def signup(request):
-    if request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            #process signup
-            return HttpResponseRedirect('avatar.html')
-    else:
-        context = {
-            'form': SignUpForm,
-        }
-        return render(request, 'registration/signup.html', context)
+class Signup(generic.CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('avatar')
+    template_name = 'registration/signup.html'
 
 
 # map
@@ -72,13 +67,6 @@ class ActivityListView(generic.ListView):
 
 class ActivityDetailView(generic.DetailView):
     model = Activity
-
-#
-#class ActivityCreation(LoginRequiredMixin, generic.edit.CreateView):
-#    login_url = ''
-#    model = Activity
-#    fields = '__all__'
-#    template_name = 'create-activity-page.html'
 
 
 def create_activity(request):
