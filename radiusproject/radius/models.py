@@ -3,6 +3,7 @@ import uuid
 import datetime as datetime
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -26,6 +27,7 @@ class Activity(models.Model):
     datetime = models.DateTimeField(default=datetime.datetime.now())
     longitude = models.FloatField(default=151.7420)
     latitude = models.FloatField(default=-33.871846)
+    image = models.ImageField(upload_to='images/', default='noimage.jpg')
 
     def __str__(self):
         """String for representing the Model object."""
@@ -45,5 +47,22 @@ class ActivityInstance(models.Model):
         """String for representing the Model object."""
         return f'{self.id} ({self.activity.name})'
 
-# Start of User profile account
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    interests = models.ManyToManyField(ActivityTags)
+    bio = models.TextField(help_text='User Bio', blank=True)
+    location = models.CharField(max_length=30, blank=True)
+    AVATAR_CHOICES = [
+        (1, 'avat1.png'),
+        (2, 'avat2.png'),
+        (3, 'avat3.png'),
+        (4, 'avat4.png'),
+        (5, 'avat5.png'),
+        (6, 'avat6.png'),
+        (7, 'avat7.png'),
+    ]
+    avatar = models.IntegerField(
+        choices=AVATAR_CHOICES,
+        default=1
+    )
