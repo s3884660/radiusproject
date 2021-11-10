@@ -56,10 +56,9 @@ def about(request):
 def history(request):
     return render(request, 'history.html')
 
-# history page
-class Favourites(generic.ListView):
-    model = Activity
-    template_name = 'favourites.html'
+def favourites(request):
+    activities = Activity.objects.all()
+    return render(request, 'favourites.html', {'activities' :activities})
 
 class ActivityListView(generic.ListView):
     model = Activity

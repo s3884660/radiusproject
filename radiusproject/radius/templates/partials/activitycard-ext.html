@@ -1,18 +1,13 @@
 {% load static %}
-{% block content %}
-<main>
-        <h1>Favorites Page Test</h1>
-        {% if activity_list %}
-        <div class="activity_list">
-                {% for activity in activity_list %}
-                <div class="activityList">
-                        <img src="static/img/" alt="{{ activity.name }}" class="overlay_img_ext">
-                        <div class="activity_title_ext">{{ activity.name }}</div>
-                        <div class="overlay_description_ext">{{ activity.description }}</div>
-                </div>
+<h1>Favorites Page Test</h1>
+{% if activities %}
+        <div class="activityList">
+                {% for activity in activities %}
+                        <div class="activity_container">
+                        <img src="static/img/" alt="{{ activity.name }}" class="overlay_img">
+                                <div class="activity_title">{{ activity.name }}</div>
+                                <div class="overlay_description">{{ activity.description }}</div>
+                        </div>
                 {% endfor %}
-                {% endif %}
+{% endif %}
         </div>
-</main>
-
-{% endblock %}

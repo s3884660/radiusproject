@@ -16,7 +16,7 @@ urlpatterns = [
     path('signup', views.Signup.as_view()),
     path('create', views.create_activity),
     path('activity', views.activity),
-    path('favourites', views.Favourites.as_view(), name='favourites'),
+    path('favourites', views.favourites, name='favourites'),
     path('history', views.history),
     path('about', views.about),
     path('activities/', views.ActivityListView.as_view(), name='activities'),
