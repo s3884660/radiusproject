@@ -1,12 +1,12 @@
 {% load static %}
 <h1>Favorites Page Test</h1>
 {% if activities %}
-        <div class="activityList">
+        <div class="fav_activityList">
                 {% for activity in activities %}
-                        <div class="activity_container">
-                        <img src="static/img/" alt="{{ activity.name }}" class="overlay_img">
-                                <div class="activity_title">{{ activity.name }}</div>
-                                <div class="overlay_description">{{ activity.description }}</div>
+                        <div class="fav_activity_container">
+                                <div class="fav_img"><img src="static/img/logo_icon.png" alt="{{ activity.name }}"></div>
+                                <div class="fav_description">{{ activity.description }}</div>
+                                <div class="fav_activity_title">{{ activity.name }}</div>
                         </div>
                 {% endfor %}
 {% endif %}
