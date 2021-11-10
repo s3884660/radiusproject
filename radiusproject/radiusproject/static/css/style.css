@@ -130,8 +130,12 @@ nav ul>li a:active{
 }
   
 .mapboxgl-popup-content {
-    text-align: left;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
+}
+
+.popup_button {
+    margin-top:1vw;
 }
 
 /* ------------- Homepage Hover Boxes -------------*/
