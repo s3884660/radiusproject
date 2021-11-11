@@ -21,7 +21,8 @@
           var activityTitle = "{{activity.name}}" ;
           var activityTags = "{{activity.tags.all|join:', '}}";
           var activityAddress = "{{activity.address}}";
-          addMarkers(activityCoordinates, activityTitle, activityTags, activityAddress);
+          var activityURL = "{{activity.id}}";
+          addMarkers(activityCoordinates, activityTitle, activityTags, activityAddress, activityURL);
         </script>
       {% endfor %}
     {% endif %}

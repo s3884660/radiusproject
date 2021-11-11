@@ -19,7 +19,7 @@ function showPosition(position) {
   });
 }
 
-function addMarkers(coordinates,title,tags,address) {
+function addMarkers(coordinates,title,tags,address,url) {
   const el = document.createElement('div');
   el.className = 'marker';
 
@@ -28,7 +28,7 @@ function addMarkers(coordinates,title,tags,address) {
   .setPopup(
     new mapboxgl.Popup({ offset: 25 }) // add popups
       .setHTML(
-        "<h3>"+title+"</h3><p>Tags: "+tags+"<br>Address: "+address+" <br><button onclick='window.location.href=\"/activity\"' class='popup_button'>View</button></p>"
+        "<h3>"+title+"</h3><p>Tags: "+tags+"<br>Address: "+address+" <br><button onclick='window.location.href=\"/activities/"+url+"\"' class='popup_button'>View</button></p>"
       )
   )
   .addTo(map);
