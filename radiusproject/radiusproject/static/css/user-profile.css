@@ -1,0 +1,123 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: center;
+  }
+
+  body {
+    margin: 0px;
+  }
+
+  .flex-sizing {
+    padding: 20px;
+    margin: 0px;
+    flex: 1;
+    align-items: center;
+    background-color: transparent;
+
+  }
+
+
+  .profile-box {
+    background: #f7f7f7;
+    border: 6px solid #F1F1FA;
+    padding: 50px;
+    border-radius: 8px;
+    display: grid;
+    width: 1080px;
+    height: 500px;
+    margin-top: 40px;
+  }
+
+    .activity-pill{
+
+}
+
+  .button2 {
+
+    background-color: #5EAE66;
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 14px;
+    color: white;
+    height: 38px;
+    width: 142px;
+    cursor: pointer;
+    margin-left: 900px;
+    border: none
+  }
+
+  .pill1 {
+
+    background-color: #A162F2;
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 14px;
+    color: white;
+    height: 30px;
+    width: 90px;
+    cursor: pointer;
+    margin-left: 300px;
+    margin-top: 60px;
+    border: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: center;
+
+  }
+
+  .pill2 {
+
+    background-color: #FF9662;
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 14px;
+    color: white;
+    height: 30px;
+    width: 90px;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-top: 60px;
+    border: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .pill3 {
+
+    background-color: #ED6B63;
+    border-style: solid;
+    font-size: 14px;
+    color: white;
+    height: 30px;
+    width: 90px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 60px;
+    border: none;
+    display: inline-block;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+
+  .bio-info input{
+
+    background-color: #F1F1FA;
+    height: 191px;
+    width: 468px;
+    position: center;
+    border: none;
+
+  }
+
+  .avatar-logo{
+      height: 200px;
+      width: 200px;
+      padding-left: 400px;
+  }
