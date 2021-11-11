@@ -391,6 +391,10 @@ button:focus {
 	outline: none;
 }
 
+.moreAct {
+    margin: 0.5vw;
+}
+
 form {
 	background-color: #FFFFFF;
 	padding: 0 50px;
