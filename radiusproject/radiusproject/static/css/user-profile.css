@@ -121,3 +121,18 @@
       width: 200px;
       padding-left: 400px;
   }
+
+  .counter-km{
+  padding-bottom: 120px;
+
+}
+
+.counter-km input{
+  width: 30px;
+
+}
+
+.counter-km input total{
+  background-color: tomato;
+
+}

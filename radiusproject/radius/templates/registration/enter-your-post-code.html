@@ -8,8 +8,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Grid</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Enter your post code</title>
+  <link rel="stylesheet" href="{% static 'css/user-profile.css' %}">
 </head>
 
 <body>
@@ -20,9 +20,12 @@
         <div class="form">
           <label for="fname">Enter your post code<br>
           <input type="text" class="email-icon" name="fname" value= "eg. 7250"><br>
-          <label for="lname">Add counter here</label><br>
-          <input type="text" class="password-icon" name="lname" value="Enter password">
         </div>
+        <div class="counter-km">
+          <input class="plus" type="button" value="-"  data-for="quantity1">
+          <input class="total" type="number" id="quantity1" value="1" min="0">
+          <input class="plus" type="button" value="+" data-for="quantity1">
+      </div>
         <div class="button-login">
           <button class="button-avatar-continue">Continue</button>
         </div>
@@ -35,6 +38,7 @@
       </div>
     </div>
   </div>
+<script src="{% static 'js/registration.js' %}"></script>
 </body>
 
 </html>
