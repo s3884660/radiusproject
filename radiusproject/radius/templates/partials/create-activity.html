@@ -23,7 +23,7 @@
         <h4>Date</h4>
         {{ form.datetime }}
         <!--TODO tags -->
-        <!-- Commenting out the nice checkboxes, sorry :(
+        <!-- Commenting out the nice checkboxes, sorry 
 			<div class="tags_container">
 				<ul class="ks-cboxtags">
 				  <li><input type="checkbox" id="checkboxOne" value="outisde"><label for="checkboxOne">Outside</label></li>
@@ -36,7 +36,20 @@
       <div>
         <img src="{% static 'img/upload-image.png' %}" alt="activity-image" />
         <div class="create_map_conatiner" id="create_map_container">
-          {% include 'partials/secondary_map.html' %}
+          {% include 'partials/maps.html' %}
+          <script>
+            var marker = new mapboxgl.Marker();
+
+            function add_marker (event) {
+              var coordinates = event.lngLat;
+              var eventLong = coordinates.lng;
+              var eventLat = coordinates.lat;
+              console.log('Lng:', coordinates.lng, 'Lat:', coordinates.lat);
+              marker.setLngLat(coordinates).addTo(map);
+            }
+
+            map.on('click', add_marker);
+          </script>
           <h4>Tags</h4>
             <!-- TODO turn off border, add background colour -->
           {{ form.tags }}
