@@ -23,7 +23,8 @@ urlpatterns = [
     path('activities/<str:pk>', views.ActivityDetailView.as_view(), name='activity-detail'),
     path('activity/create', views.create_activity, name='activity-creation'),
     path('longlat', views.longlat, name='longlattest'),
-    path('avatar', views.avatar, name='avatar')
+    path('avatar', views.avatar, name='avatar'),
+    path('logout', views.logout_view, name='logout')
 ]
 
 if settings.DEBUG:

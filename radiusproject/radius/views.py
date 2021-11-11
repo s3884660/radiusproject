@@ -8,6 +8,7 @@ from .models import Activity
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
+from django.contrib.auth import logout
 
 #views
 
@@ -96,3 +97,8 @@ def longlat(request):
 
 def avatar(request):
     return render(request, 'registration/avatar.html')
+
+
+def logout_view(request):
+    logout(request)
+    return render(request, 'index.html')

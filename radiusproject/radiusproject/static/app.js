@@ -42,3 +42,11 @@ function createActivity() {
   window.location.href = "/activity/create"
 }
 
+function logout() {
+  window.location.href = "/logout"
+}
+
+function login() {
+  window.location.href = "/login"
+}
+

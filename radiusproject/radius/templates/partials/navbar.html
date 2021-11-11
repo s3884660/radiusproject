@@ -11,10 +11,16 @@
 			<li><a href="about"><i class="fas fa-info-circle"></i> About</a></li>
 			<li><a><button onclick="createActivity()"><i class="fas fa-plus-circle"></i> Create Activity</button></a></li>
 		</ul>
+		{% if request.user.is_authenticated %}
 		<ul>
-			<li><a href="#"><i class="far fa-user-circle"></i> Username</a></li>
-			<li><a href="#"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+			<li><a href="#"><i class="far fa-user-circle"></i> {{ request.user.username }}</a></li>
+			<li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
 		</ul>
+		{% else %}
+		<ul>
+			<li><a href="#" onclick="login()"><i class="fas fa-sign-out-alt"></i> Log In</a></li>
+		</ul>
+		{% endif %}
 		</div>
 	</nav>
 </header>
