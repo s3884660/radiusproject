@@ -345,6 +345,8 @@ footer ul a:hover {
 .fav_activity_container {
     display:flex;
     flex-direction: row;
+    gap:4vw;
+    padding-right: 4%;
 }
 
 .fav_img img{
