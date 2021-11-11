@@ -509,6 +509,10 @@ input[type=submit]{
     align-items: stretch;
 }
 
+#id_longitude, #id_latitude {
+    display:none;
+}
+
 /* ------------ activity / activity-details page -----------*/
 
 .activity_detail_container{

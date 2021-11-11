@@ -16,9 +16,7 @@
         <h4>Address</h4>
         <!-- TODO MAPBOX external html input for address + pin-->
         {{ form.address }}
-        <h4>Longitude</h4>
         {{ form.longitude }}
-        <h4>Latitude</h4>
         {{ form.latitude }}
         <h4>Date</h4>
         {{ form.datetime }}
@@ -46,6 +44,8 @@
               var eventLat = coordinates.lat;
               console.log('Lng:', coordinates.lng, 'Lat:', coordinates.lat);
               marker.setLngLat(coordinates).addTo(map);
+              document.getElementById("id_longitude").value = eventLong;
+              document.getElementById("id_latitude").value = eventLat;
             }
 
             map.on('click', add_marker);
