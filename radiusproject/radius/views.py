@@ -54,7 +54,8 @@ def about(request):
 
 # history page
 def history(request):
-    return render(request, 'history.html')
+    activities = Activity.objects.all()
+    return render(request, 'history.html', {'activities' :activities})
 
 def favourites(request):
     activities = Activity.objects.all()

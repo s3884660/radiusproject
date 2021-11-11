@@ -71,6 +71,7 @@ nav{
     align-items: center;
     font-family: 'DM Sans', sans-serif;
     box-shadow: 1px 1px 1px 1px var(--clr-grey1);
+    font-size:1.3vw;
 }
 
 nav ul{
@@ -327,6 +328,7 @@ footer ul a:hover {
     border-radius: 12px;
     box-shadow: 0px 2px 4px rgba(28, 5, 77, 0.1), 0px 12px 32px rgba(0, 0, 0, 0.05);
     background:var(--clr-grey1);
+    font-size:1.8vw;
 }
 
 .fav_activity_title{
@@ -355,67 +357,6 @@ footer ul a:hover {
 
 
 
-
-/* ------------- RWD styling -------------*/
-
-@media (min-width: 641px){
-   
-    body{
-        margin:0px;
-        font-size:16px;
-    }
-
-    main{
-        margin: 3vw;
-    }
-
-    .grid-main {
-        display: grid;
-        grid-template-columns:
-          minmax(1em, 1fr)
-          minmax(5rem,10rem)
-          repeat(2, minmax(10rem, 35rem))
-          minmax(1em, 1fr);
-        gap: 1em;
-        position: relative;
-    }
-
-    header{
-        grid-column: 1/6;
-    }
-
-    main{
-        grid-column: 2/5;
-    }
-
-    footer{
-        grid-column: 1/6;
-        padding-left:3%;
-        padding-right:3%; 
-    }
-
-    #map { 
-        width: 100%; 
-        height: 27vw;
-    }
-
-}
-
-@media(min-width: 1008px){
-
-    body{
-        font-size:18px;
-    }
-
-    #map { 
-        width: 100%; 
-        height: 35vw;
-    }
-}
-
-/*------- Main pages css ------ */
-
-
 * {
 	box-sizing: border-box;
 }
@@ -436,9 +377,9 @@ button {
 
 nav ul>li button{
     text-transform:none;
-    font-size: 14px;
+    font-size: 1.2vw;
     font-weight:600;
-    padding: 12px 20px;
+    padding: 1vw 1.5vw;
 }
 
 button:active,
@@ -674,6 +615,69 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 
 
+/* ------------- RWD styling -------------*/
+
+@media (min-width: 641px){
+   
+    body{
+        margin:0px;
+        font-size:16px;
+    }
+
+    main{
+        margin: 3vw;
+    }
+
+    .grid-main {
+        display: grid;
+        grid-template-columns:
+          minmax(1em, 1fr)
+          minmax(5rem,10rem)
+          repeat(2, minmax(10rem, 35rem))
+          minmax(1em, 1fr);
+        gap: 1em;
+        position: relative;
+    }
+
+    header{
+        grid-column: 1/6;
+    }
+
+    main{
+        grid-column: 2/5;
+    }
+
+    footer{
+        grid-column: 1/6;
+        padding-left:3%;
+        padding-right:3%; 
+    }
+
+    #map { 
+        width: 100%; 
+        height: 27vw;
+    }
+
+}
+
+@media(min-width: 1008px){
+
+    body{
+        font-size:18px;
+    }
+
+    nav {
+        font-size:1.3vw;
+    }
+
+    nav ul>li button{
+        font-size:1.3vw;
+    }
+    #map { 
+        width: 100%; 
+        height: 35vw;
+    }
+}
 
 
 /*#preloader {*/
