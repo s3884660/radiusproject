@@ -457,22 +457,6 @@ input[type=submit]{
 
 /* ------------- Sign in pages ------------- */
 
-/*-------------- About Page -----------------*/
-
-.about-heading{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: center;
-    align-items: center;
-}
- 
-.about-article{
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
 /* ------------- Create Activity page ------------- */
 
 /*-- input fields --*/
@@ -555,7 +539,6 @@ input[type=submit]{
     cursor: pointer;
 }
 
-
 /* ------------ activity / activity-details page -----------*/
 
 .activity_detail_container{
@@ -580,6 +563,22 @@ input[type=submit]{
     flex-direction:column;
     max-width: 30vw;
     min-width: 33vw;
+}
+
+/*-------------- About Page -----------------*/
+
+.about-heading{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.about-article{
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 /* ------------- RWD styling -------------*/
