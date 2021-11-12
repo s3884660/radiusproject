@@ -577,6 +577,7 @@ input[type=submit]{
 }
 
 .about-heading-image{
+    padding: 1vw 1vw;
     max-width: 20vw;
 }
 
@@ -603,6 +604,12 @@ input[type=submit]{
     flex-direction: row-reverse;
     align-items: center;
     padding: 1vw 1vw;
+}
+
+.spotlight-image{
+    padding: 1vw 1vw;
+    max-width: 150px ;
+    max-height: 150px
 }
 /* ------------- RWD styling -------------*/
 
