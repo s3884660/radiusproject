@@ -469,7 +469,6 @@ input[type=submit]{
 }
  
 .about-article{
-    
     flex-direction: column;
     flex-wrap: wrap;
 }
@@ -483,11 +482,15 @@ input[type=submit]{
 #id_description, 
 #id_address, 
 #id_datetime {
-	background-color: #eee;
+	background-color: var(--clr-grey2);
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
+}
+
+#id_longitude, #id_latitude {
+    display:none;
 }
 
 .create-activity{
@@ -520,10 +523,6 @@ input[type=submit]{
     align-items: stretch;
 }
 
-#id_longitude, #id_latitude {
-    display:none;
-}
-
 /* ------------- tags ------------- */
 
 .tag_container {
@@ -542,18 +541,12 @@ input[type=submit]{
 
 #id_tags li label{
     display: inline-block;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: #fff;
     border: 2px solid rgba(139, 139, 139, .3);
     color: #adadad;
     border-radius: 25px;
     white-space: nowrap;
     margin: 3px 0px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
     transition: all .2s;
 }
 
