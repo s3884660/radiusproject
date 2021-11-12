@@ -575,12 +575,35 @@ input[type=submit]{
     justify-content: center;
     align-items: center;
 }
- 
-.about-article{
-    flex-direction: column;
-    flex-wrap: wrap;
+
+.about-heading-image{
+    max-width: 20vw;
 }
 
+.about-article{
+    margin: 2vw;
+    padding: 4vw 4vw;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+                0 10px 10px rgba(0,0,0,0.22);
+}
+
+.feature-about-image{
+    width:100%;
+}
+.about-spotlight{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vw 1vw;
+}
+
+.about-spotlight-alt{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 1vw 1vw;
+}
 /* ------------- RWD styling -------------*/
 
 @media (min-width: 641px){
