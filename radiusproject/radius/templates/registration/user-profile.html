@@ -4,26 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Grid</title>
-  <link rel="stylesheet" href="{% static 'css/user-profile.css' %}">
+  <link rel="stylesheet" href="./user-profile.css">
 </head>
 
 <body>
   <div class="flex">
     <div class="profile-box">
       <div class="flex-sizing">
-        <button class="button button2">Edit Profile</button>
+        <button class="button button2"><a href="" onClick="return popitup('http://www.abc.com/youpage')">Edit Profile</a></button>
           <img class="avatar-logo" src="./img/avatar1.png" alt="alt text">
-          <p style="font-size: 24px; padding-left: 450px; margin-top: 0px;">username</p>
-          <sup style="font-size: 14px; padding-left: 450px; margin-top: 0px; font-style: italic; text-align: center;">This user hasn't enter a bio</sup>
+          <p style="font-size: 20px; margin-top: 0px; font-style: italic; text-align: center;">username</p>
+          <p style="font-size: 14px; margin-top: 0px; font-style: italic; text-align: center;">This user hasn't enter a bio</p>
         <div class="flex">
           <span class="pill1">healty</span>
           <span class="pill2"></span>
           <span class="pill3"></span>
         </div>
       </div>
-
     </div>
   </div>
+  <script src="style.js"></script>
 </body>
 
 </html>

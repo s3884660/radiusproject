@@ -19,3 +19,10 @@ cart.addEventListener('click', function(ev) {
 
   }
 });
+
+function popitup(url)
+{
+ newwindow=window.open(url,'name','height=300,width=650,screenX=400,screenY=350');
+ if (window.focus) {newwindow.focus()}
+ return false;
+}
