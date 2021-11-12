@@ -405,14 +405,6 @@ form {
     display: none;
 }
 
-input {
-	background-color: #eee;
-	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 100%;
-}
-
 input[type=submit]{
     border-radius: 20px;
     border: 1px solid var(--clr-darkGreen);
@@ -424,6 +416,7 @@ input[type=submit]{
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor:pointer;
+    width: 100%;
 }
 
 .container {
@@ -483,12 +476,26 @@ input[type=submit]{
 
 /* ------------- Create Activity page ------------- */
 
+/*-- input fields --*/
+#id_name ,
+#id_file, 
+#id_image, 
+#id_description, 
+#id_address, 
+#id_datetime {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
 .create-activity{
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    align-content: center;
-    justify-content: center;
+    min-width: 30vw;
+}
+
+.image_container {
+    padding: 10px;
 }
 
 .create_activity_form_outer{
@@ -517,6 +524,45 @@ input[type=submit]{
     display:none;
 }
 
+/* ------------- tags ------------- */
+
+.tag_container {
+    max-width: 645px;
+    font-size: 14px;
+}
+
+#id_tags {
+    list-style: none;
+    padding: 20px;
+}
+
+#id_tags li{
+  display: inline;
+}
+
+#id_tags li label{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, .9);
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: #adadad;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+}
+
+#id_tags li label {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+
 /* ------------ activity / activity-details page -----------*/
 
 .activity_detail_container{
@@ -542,86 +588,6 @@ input[type=submit]{
     max-width: 30vw;
     min-width: 33vw;
 }
-
-/* ------------- tags ------------- */
-.tag_container {
-    max-width: 645px;
-    font-size: 14px;
-}
-
-ul.ks-cboxtags {
-    list-style: none;
-    padding: 20px;
-}
-
-ul.ks-cboxtags li{
-  display: inline;
-}
-
-ul.ks-cboxtags li label{
-    display: inline-block;
-    background-color: rgba(255, 255, 255, .9);
-    border: 2px solid rgba(139, 139, 139, .3);
-    color: #adadad;
-    border-radius: 25px;
-    white-space: nowrap;
-    margin: 3px 0px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: all .2s;
-}
-
-ul.ks-cboxtags li label {
-    padding: 8px 12px;
-    cursor: pointer;
-}
-
-ul.ks-cboxtags li label::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 12px;
-    padding: 2px 6px 2px 2px;
-    content: "\f067";
-    transition: transform .3s ease-in-out;
-}
-
-ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
-    content: "\f00c";
-    transform: rotate(360deg);
-    transition: transform .3s ease-in-out;
-}
-
-/* ------------- default tag colour ------------- */
-ul.ks-cboxtags li input[type="checkbox"]:checked + label {
-    border: 2px solid var(--clr-green2);
-    background-color: var(--clr-darkGreen);
-    color: var(--clr-grey3);
-    transition: all .2s;
-}
-
-ul.ks-cboxtags li input[type="checkbox"] {
-  display: absolute;
-}
-
-ul.ks-cboxtags li input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-}
-
-ul.ks-cboxtags li input[type="checkbox"]:focus + label {
-  border: 2px solid var(--clr-lightGreen);
-}
-
-
 
 /* ------------- RWD styling -------------*/
 

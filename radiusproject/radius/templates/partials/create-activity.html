@@ -12,51 +12,43 @@
         {{ form.image }}
         <h4>Description</h4>
         {{ form.description }}
-        <!-- TODO include geo map for address--><!-- Image upload-->
+        <!-- TODO include geo map for address-->
+        <!-- Image upload-->
         <h4>Address</h4>
         <!-- TODO MAPBOX external html input for address + pin-->
-        {{ form.address }}
-        {{ form.longitude }}
-        {{ form.latitude }}
+        {{ form.address }} {{ form.longitude }} {{ form.latitude }}
         <h4>Date</h4>
         {{ form.datetime }}
-        <!--TODO tags -->
-        <!-- Commenting out the nice checkboxes, sorry 
-			<div class="tags_container">
-				<ul class="ks-cboxtags">
-				  <li><input type="checkbox" id="checkboxOne" value="outisde"><label for="checkboxOne">Outside</label></li>
-				  <li><input type="checkbox" id="checkboxTwo" value="inside" ><label for="checkboxTwo">Inside</label></li>
-				  <li><input type="checkbox" id="checkboxThree" value="community" ><label for="checkboxThree">Community</label></li>
-				</ul>
-			</div>
-			-->
       </div>
-      <div>
+
+      <div class="image_container">
         <img src="{% static 'img/upload-image.png' %}" alt="activity-image" />
         <div class="create_map_conatiner" id="create_map_container">
           {% include 'partials/maps.html' %}
           <script>
             var marker = new mapboxgl.Marker();
 
-            function add_marker (event) {
+            function add_marker(event) {
               var coordinates = event.lngLat;
               var eventLong = coordinates.lng;
               var eventLat = coordinates.lat;
-              console.log('Lng:', coordinates.lng, 'Lat:', coordinates.lat);
+              console.log("Lng:", coordinates.lng, "Lat:", coordinates.lat);
               marker.setLngLat(coordinates).addTo(map);
               document.getElementById("id_longitude").value = eventLong;
               document.getElementById("id_latitude").value = eventLat;
             }
-
-            map.on('click', add_marker);
+            map.on("click", add_marker);
           </script>
+
           <h4>Tags</h4>
-            <!-- TODO turn off border, add background colour -->
+          <!-- TODO turn off border, add background colour -->
           {{ form.tags }}
         </div>
       </div>
-      <div class="hidden">{{ form.id }}</div>
-      <input type="submit" value="Create" />
+      <div class="hidden">
+        {{ form.id }}
+      </div>
+      <input type="submit" value="Create" /> 
     </form>
   </div>
 </main>
