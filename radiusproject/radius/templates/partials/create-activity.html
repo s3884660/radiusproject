@@ -42,9 +42,6 @@
 
             // or add marker through searchbox
             geocoder.on('result', function(e) {
-              console.log(e.result.center);
-              console.log(e.result.center[0]);
-              console.log(e.result.center[1]);
               var coordinates = e.result.center;
               var eventLong = e.result.center[0];
               var eventLat = e.result.center[1];
