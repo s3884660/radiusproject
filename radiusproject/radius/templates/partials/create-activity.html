@@ -28,6 +28,7 @@
           <script>
             var marker = new mapboxgl.Marker();
 
+            //add marker on click
             function add_marker(event) {
               var coordinates = event.lngLat;
               var eventLong = coordinates.lng;
@@ -38,6 +39,20 @@
               document.getElementById("id_latitude").value = eventLat;
             }
             map.on("click", add_marker);
+
+            // or add marker through searchbox
+            geocoder.on('result', function(e) {
+              console.log(e.result.center);
+              console.log(e.result.center[0]);
+              console.log(e.result.center[1]);
+              var coordinates = e.result.center;
+              var eventLong = e.result.center[0];
+              var eventLat = e.result.center[1];
+              console.log("Lng:", e.result.center[0], "Lat:", e.result.center[1]);
+              marker.setLngLat(coordinates).addTo(map);
+              document.getElementById("id_longitude").value = eventLong;
+              document.getElementById("id_latitude").value = eventLat;
+            })
           </script>
 
           <h4>Tags</h4>
