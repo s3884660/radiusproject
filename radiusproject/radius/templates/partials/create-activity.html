@@ -45,11 +45,15 @@
               var coordinates = e.result.center;
               var eventLong = e.result.center[0];
               var eventLat = e.result.center[1];
-              console.log("Lng:", e.result.center[0], "Lat:", e.result.center[1]);
+              var address = e.result.place_name;
+              console.log("Lng:", e.result.center[0], "Lat:", e.result.center[1], address);
               marker.setLngLat(coordinates).addTo(map);
               document.getElementById("id_longitude").value = eventLong;
               document.getElementById("id_latitude").value = eventLat;
-            })
+            });
+
+
+
           </script>
 
           <h4>Tags</h4>
