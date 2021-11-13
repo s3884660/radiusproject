@@ -575,6 +575,7 @@ input[type=submit]{
 }
 
 .overlay_img_ext{
+    width: 100%;
     max-width: 225px;
     max-height: 225px;
     margin: 1vw 1vw;
