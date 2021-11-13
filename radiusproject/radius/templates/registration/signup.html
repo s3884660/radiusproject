@@ -1,11 +1,52 @@
-{% extends 'base.html' %}
+
+
+{% extends './registration-base.html' %}
+{% load static %}
 
 {% block content %}
-<form action="" method="post">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit">
-</form>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="flex">
+    <div class="item">
+      <div class="flex-sizing">
+          <p class="logo-radius"> <img src="{% static '/img/frame-13.png' %}" alt="alt text"></p>
+          <p style="font-size: 24px;">Welcome</p>
+          <p style="font-size: 24px;"><strong>Join The Community</strong></p>
+        <div class="form">
+            <label for="fname">Username<br>
+          {{ form.username }}
+          <label for="fname">Email</label><br>
+         {{ form.email }}
+          <label for="lname">Password</label><br>
+          {{ form.password }}
+        </div>
+        <div class="button-login">
+            <p style="font-size: 14px;">By clicking Sign Up, you agree to our <strong>terms and Conditions.</strong></p>
+          <button class="button button1">Sign Up</button>
+          <button class="button button2">Sign In</button>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="flex">
+      <div class="map">
+        <div class="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
 {% endblock %}
