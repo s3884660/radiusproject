@@ -577,7 +577,7 @@ input[type=submit]{
 .overlay_img_ext{
     max-width: 225px;
     max-height: 225px;
-    padding: 1vw 1vw;
+    margin: 1vw 1vw;
 }
 
 /*-------------- About Page -----------------*/
