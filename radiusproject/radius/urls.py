@@ -23,7 +23,8 @@ urlpatterns = [
     path('activity/create', views.create_activity, name='activity-creation'),
     path('avatar', views.avatar, name='avatar'),
     path('logout', views.logout_view, name='logout'),
-    path('postcode', views.postcode)
+    path('postcode', views.postcode),
+    path('profile', views.profile)
 ]
 
 if settings.DEBUG:

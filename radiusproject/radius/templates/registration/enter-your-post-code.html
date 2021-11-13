@@ -19,15 +19,15 @@
             <p class="logo-radius"><img src="{% static '/img/frame-13.png' %}" alt="alt text"></p>
             <form action="" method="post">
                 <div class="form">
+                    <h4>Enter Your Postcode</h4>
                     {{ form.postcode }}
                     {% csrf_token %}
-                        <input type="text" class="email-icon" name="fname" value="eg. 7250"><br>
                 </div>
                 <div class="counter-km">
-                    {{ form.radius }}
-                    <input class="plus" type="button" value="-" data-for="quantity1">
-                    <input class="total" type="number" id="quantity1" value="1" min="0">
-                    <input class="plus" type="button" value="+" data-for="quantity1">
+                    <h4>Enter Your Preferred Radius</h4>
+                    <input class="plus" type="button" value="-" data-for="quantity1" onclick="increment()">
+                    {{ form.radius }}km
+                    <input class="plus" type="button" value="+" data-for="quantity1" onclick="decrement()">
                 </div>
                 <div class="button-login">
                     <input type="submit" value="Continue" class="button-avatar-continue">

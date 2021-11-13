@@ -133,9 +133,13 @@ def postcode(request):
         # check whether it's valid:
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/postcode')
+            return HttpResponseRedirect('/profile')
 
     # if a GET (or any other method) we'll create a blank form
     else:
         form = ProfileFormPostcode()
     return render(request, 'registration/enter-your-post-code.html', {'form': form})
+
+def profile(request):
+    profile = request.user.profile
+    return render(request, 'registration/user-profile.html', {'profile': profile})
