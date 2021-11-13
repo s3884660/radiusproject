@@ -109,7 +109,7 @@ def avatar(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        form = ProfileFormAvatar(request.POST, instance=request.user)
+        form = ProfileFormAvatar(request.POST, instance=request.user.profile)
         # check whether it's valid:
         if form.is_valid():
             form.save()
@@ -129,7 +129,7 @@ def postcode(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        form = ProfileFormPostcode(request.POST, instance=request.user)
+        form = ProfileFormPostcode(request.POST, instance=request.user.profile)
         # check whether it's valid:
         if form.is_valid():
             form.save()
