@@ -126,4 +126,16 @@ def logout_view(request):
     return render(request, 'index.html')
 
 def postcode(request):
-    return render(request, 'registration/enter-your-post-code.html')
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = ProfileFormPostcode(request.POST, instance=request.user)
+        # check whether it's valid:
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/postcode')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = ProfileFormPostcode()
+    return render(request, 'registration/enter-your-post-code.html', {'form': form})

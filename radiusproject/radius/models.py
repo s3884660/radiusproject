@@ -55,6 +55,8 @@ class Profile(models.Model):
     interests = models.ManyToManyField(ActivityTags)
     bio = models.TextField(help_text='User Bio', blank=True)
     location = models.CharField(max_length=30, blank=True)
+    postcode = models.IntegerField(default=2000)
+    radius = models.IntegerField(default=1)
     AVATAR_CHOICES = [
         (1, 'avat1.png'),
         (2, 'avat2.png'),

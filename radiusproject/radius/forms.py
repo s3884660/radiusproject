@@ -38,3 +38,9 @@ class ProfileFormAvatar(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['avatar']
+
+
+class ProfileFormPostcode(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['postcode', 'radius']
