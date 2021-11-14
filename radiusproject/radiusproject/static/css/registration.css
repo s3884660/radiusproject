@@ -72,6 +72,30 @@ background-color: #Ffffff;
   font-family:"DM Sans";
 }
 
+.signup-design{
+  padding-top: 30px;
+  padding-bottom: 60px;
+  
+
+}
+
+.signup-design label{
+  font-size: larger;
+  font-family: "DM Sans";
+}
+
+.signup-design input{
+  background-color: #F1F1FA;
+  box-shadow: 2px 2px 5px #DBDBE9;
+  border-radius: 5px;
+  border: 0px solid;
+  height: 34px;
+  width: 370px;
+  margin-top:10px;
+  margin-bottom: 20px;
+  font-family:"DM Sans";
+}
+
 
 .button-login {
   border: none;
