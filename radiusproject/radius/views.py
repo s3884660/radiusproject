@@ -54,7 +54,7 @@ def about(request):
 
 # history page
 def history(request):
-    activities = Activity.objects.all()
+    activities = request.user.profile.history.all()
     return render(request, 'history.html', {'activities' :activities})
 
 def favourites(request):
@@ -67,9 +67,11 @@ class ActivityListView(generic.ListView):
 
 class ActivityDetailView(generic.DetailView):
     model = Activity
+    login_required = True
 
-    def get_object(self):
+    def get_object(self, **kwargs):
         obj = super().get_object()
+        self.request.user.profile.history.add(obj)
         return obj
 
 
