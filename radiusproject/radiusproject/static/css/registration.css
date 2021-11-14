@@ -7,6 +7,11 @@
   justify-content: center;
 }
 
+.p{
+  margin: 0;
+    padding: 0;
+
+}
 .cover {
 	background-image: url("../img/background.png");
 }
@@ -74,9 +79,7 @@ background-color: #Ffffff;
 
 .signup-design{
   padding-top: 30px;
-  padding-bottom: 60px;
-  
-
+  padding-bottom: 20px;
 }
 
 .signup-design label{
@@ -102,7 +105,7 @@ background-color: #Ffffff;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .button1 {
