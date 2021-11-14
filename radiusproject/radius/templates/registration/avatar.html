@@ -5,16 +5,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Grid</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Select an avatar</title>
 </head>
 
 <body>
+
   <div class="flex">
     <div class="item">
       <div class="flex-sizing">
           <p class="logo-radius"> <img src="{% static '/img/frame-13.png' %}" alt="alt text"></p>
-          <p style="font-size: 24px;">Select an avatar</p>
+          <p style="font-size: 20px;">Select an avatar</p>
           <div class="button-avatar">
             <button class="button button-avatar" onclick="avatar(1)"><img src="{% static '/img/avat1.png' %}" width="100px" height="100px"></button>
             <button class="button button-avatar" onclick="avatar(2)"><img src="{% static '/img/avat2.png' %}" width="100px" height="100px"></button>
@@ -23,7 +23,6 @@
             <button class="button button-avatar" onclick="avatar(5)"><img src="{% static '/img/avat5.png' %}" width="100px" height="100px"></button>
             <button class="button button-avatar" onclick="avatar(6)"><img src="{% static '/img/avat6.png' %}" width="100px" height="100px"></button>
             <button class="button button-avatar" onclick="avatar(7)"><img src="{% static '/img/avat7.png' %}" width="100px" height="100px"></button>
-            <button class="button button-avatar" onclick="avatar(8)"><img src="{% static '/img/avat8.png' %}" width="100px" height="100px"></button>
           </div>
         <form action="" method="post">
           {% csrf_token %}
@@ -33,7 +32,6 @@
         </div>
           </form>
       </div>
-
     </div>
     <div class="flex">
       <div class="map">
@@ -42,7 +40,9 @@
       </div>
     </div>
   </div>
+<!--  <script src="radiusproject/radiusproject/static/css/registration.css"></script>-->
 </body>
+
 <script>
   //TODO - move this to the actual script file, disappear the select box (display: none, not done yet for visibility) - Al
 function avatar(option) {

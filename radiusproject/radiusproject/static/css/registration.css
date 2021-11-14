@@ -144,9 +144,7 @@ background-color: #Ffffff;
 .button-avatar{
 border-style: none;
 background-color: transparent;
-padding-bottom: 30px;
-
-
+  padding-bottom: 5px;
 }
 
 .button-avatar img{
@@ -194,4 +192,8 @@ padding-bottom: 30px;
     background-image:url("../img/pw.png");
     background-repeat: no-repeat;
     background-position: 2px 3px;
+}
+
+.select {
+  display: none;
 }

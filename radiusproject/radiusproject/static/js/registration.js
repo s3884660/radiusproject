@@ -26,3 +26,8 @@ function popitup(url)
  if (window.focus) {newwindow.focus()}
  return false;
 }
+
+
+function avatar(option) {
+  document.getElementById("id_avatar").value = option;
+}
