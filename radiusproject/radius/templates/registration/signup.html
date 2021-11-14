@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign Up</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="{% static 'css/registration.css' %}">
 </head>
 
 <body>
@@ -20,23 +20,26 @@
       <div class="flex-sizing">
           <p class="logo-radius"> <img src="{% static '/img/frame-13.png' %}" alt="alt text"></p>
           <p style="font-size: 24px;">Welcome</p>
-          <p style="font-size: 24px;"><strong>Join The Community</strong></p>
+          <p style="font-size: 20px;"><strong>Join The Community</strong></p>
         <div class="form">
+            <div class="form-design">
             <form action="" method="post">
                 {% csrf_token %}
-            <label for="fname">Username<br></label>
+            <label for="fname" style="margin-bottom: 5px">Username<br></label>
           {{ form.username }}
           <label for="fname">Email</label><br>
          {{ form.email }}
           <label for="lname">Password</label><br>
           {{ form.password1 }}
+                 <label for="lname">Repeat Password</label><br>
                 {{ form.password2 }}
                 <input type="submit" value="submit">
             </form>
+            </div>
         </div>
         <div class="button-login">
             <p style="font-size: 14px;">By clicking Sign Up, you agree to our <strong>terms and Conditions.</strong></p>
-          <button class="button button1">Sign Up</button>
+          <button class="button button1"> <input type="submit" value="submit">Sign Up</button>
           <button class="button button2">Sign In</button>
 
         </div>
