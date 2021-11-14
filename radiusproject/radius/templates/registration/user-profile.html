@@ -1,6 +1,6 @@
-
 {% load static %}
-
+{% block content %}
+{% include 'partials/navbar.html' %}
 <!DOCTYPE html>
 <html>
 
@@ -27,7 +27,9 @@
       </div>
     </div>
   </div>
+  {% include 'partials/activitycard-ext.html' %}
   <script src="{% static 'js/registration.js' %}"></script>
 </body>
 
 </html>
+{% endblock %}

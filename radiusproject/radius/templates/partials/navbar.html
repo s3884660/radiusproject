@@ -13,7 +13,7 @@
 		</ul>
 		{% if request.user.is_authenticated %}
 		<ul>
-			<li><a href="#"><i class="far fa-user-circle"></i> {{ request.user.username }}</a></li>
+			<li><a href="../registration/user-profile.html"><i class="far fa-user-circle"></i> {{ request.user.username }}</a></li>
 			<li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
 		</ul>
 		{% else %}
