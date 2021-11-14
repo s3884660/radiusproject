@@ -10,19 +10,16 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.contrib.auth import logout, login, authenticate
 
-#views
 
+# views
 def index(request):
     activities = Activity.objects.all()
     return render(request, 'index.html', {'activities' :activities})
 
 
-
-
-
 def signup(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
@@ -31,15 +28,8 @@ def signup(request):
             login(request, user)
             return redirect('avatar')
     else:
-        form = UserCreationForm()
+        form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
-
-
-# signup
-class Signup(generic.CreateView):
-    form_class = UserCreationForm
-    success_url = reverse_lazy('avatar')
-    template_name = 'registration/signup.html'
 
 
 # map

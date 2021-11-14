@@ -22,12 +22,17 @@
           <p style="font-size: 24px;">Welcome</p>
           <p style="font-size: 24px;"><strong>Join The Community</strong></p>
         <div class="form">
-            <label for="fname">Username<br>
+            <form action="" method="post">
+                {% csrf_token %}
+            <label for="fname">Username<br></label>
           {{ form.username }}
           <label for="fname">Email</label><br>
          {{ form.email }}
           <label for="lname">Password</label><br>
-          {{ form.password }}
+          {{ form.password1 }}
+                {{ form.password2 }}
+                <input type="submit" value="submit">
+            </form>
         </div>
         <div class="button-login">
             <p style="font-size: 14px;">By clicking Sign Up, you agree to our <strong>terms and Conditions.</strong></p>

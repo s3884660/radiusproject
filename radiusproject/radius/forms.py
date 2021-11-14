@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 from .models import Activity, Profile
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 # class SignUpForm(forms.Form):
@@ -28,10 +29,12 @@ class CreateActivity(ModelForm):
         widgets = {'tags': forms.CheckboxSelectMultiple}
 
 
-class SignUpForm(forms.Form):
+class SignUpForm(UserCreationForm):
+    email = forms.EmailField(max_length=254, help_text='Enter your email')
+
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ['username', 'password1', 'password2', 'email']
 
 
 class ProfileFormAvatar(forms.ModelForm):
@@ -44,3 +47,4 @@ class ProfileFormPostcode(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['postcode', 'radius']
+
