@@ -68,6 +68,10 @@ class ActivityListView(generic.ListView):
 class ActivityDetailView(generic.DetailView):
     model = Activity
 
+    def get_object(self):
+        obj = super().get_object()
+        return obj
+
 
 @login_required
 def create_activity(request):

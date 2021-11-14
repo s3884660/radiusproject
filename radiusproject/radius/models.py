@@ -70,6 +70,8 @@ class Profile(models.Model):
         choices=AVATAR_CHOICES,
         default=1
     )
+    favourites = models.ManyToManyField(Activity, blank=True, related_name="user_favourites")
+    history = models.ManyToManyField(Activity, blank=True, related_name="user_history")
 
 # Apparently putting the signals here is the ugly way to do it but this is getting frustrating
 @receiver(post_save, sender=User)
