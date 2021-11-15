@@ -7,16 +7,21 @@
 <head>
   <meta charset="UTF-8">
   <title>User Profile</title>
-  <link rel="stylesheet" href="{% static 'css/user-profile.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/user-profile.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@100&display=swap');
+  </style>
+  
 </head>
 <body>
   <div class="flex">
     <div class="profile-box">
       <div class="flex-sizing">
         <button class="button2"><a href="" onClick="return popitup('modal-dialog.html')">Edit Profile</a></button>
-          <img class="avatar-img" src="/static/img/avat{{ profile.avatar }}.png" alt="alt text">
-          <p style="font-size: 20px; margin-top: 0px; font-style: italic; text-align: center;">{{ user.username }}</p>
+          <img class="avatar-img" src="/static/img/avat{{ profile.avatar }}.png" alt="alt text" style="align-content: center">
+        <p style="font-size: 20px; margin-top: 0px; text-align: center;"><strong>{{ user.username }}</strong></p>
           <p style="font-size: 14px; margin-top: 0px; font-style: italic; text-align: center;">This user hasn't enter a bio</p>
         {{ profile.radius }}
         <div class="flex">
@@ -27,10 +32,12 @@
       </div>
       </div>
     </div>
-       <div class="activities-box">
-      <p style="font-size: 20px; margin-top: 0px; text-align: center;">Your activities</p>
-        </div>
-      </div>
+    <div class="activities-box">
+<!--      <div class="flex-sizing">-->
+      <p style="font-size: 20px; margin-top: 0px;">Your activities</p>
+    </div>
+<!--    </div>-->
+  </div>
 
   <script src="{% static 'js/registration.js' %}"></script>
 </body>

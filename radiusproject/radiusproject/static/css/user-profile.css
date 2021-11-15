@@ -3,24 +3,24 @@
     flex-wrap: wrap;
     gap: 0px;
     justify-content: center;
-  }
+}
 
-  .flex-sizing {
+.flex-sizing {
     padding: 20px;
     margin: 0px;
     flex: 1;
     align-items: center;
     background-color: transparent;
 
-  }
+}
 
- .flex-sizing p {
-    color: chocolate;
+.flex-sizing p {
+    color: #000000;
 
-  }
+}
 
 
-  .profile-box {
+.profile-box {
     background: #f7f7f7;
     border: 6px solid #F1F1FA;
     padding: 50px;
@@ -29,10 +29,10 @@
     width: 1080px;
     height: 500px;
     margin-top: 40px;
-  }
+}
 
 
-  .button2 {
+.button2 {
 
     background-color: #5EAE66;
     border-radius: 10px;
@@ -45,17 +45,17 @@
     margin-left: 750px;
     border: none;
     text-decoration: none;
-  }
+}
 
-    .button2 a{
+.button2 a {
 
     font-size: 10px;
     padding-bottom: 2px;
     text-decoration: none;
     color: white;
-  }
+}
 
-  .pill1 {
+.pill1 {
 
     background-color: #A162F2;
     border-radius: 10px;
@@ -74,9 +74,9 @@
     display: flex;
     justify-content: center;
 
-  }
+}
 
-  .pill2 {
+.pill2 {
 
     background-color: #FF9662;
     border-radius: 10px;
@@ -95,9 +95,9 @@
     margin-left: 10px;
     display: flex;
     justify-content: center;
-  }
+}
 
-  .pill3 {
+.pill3 {
 
     background-color: #ED6B63;
     border-style: solid;
@@ -116,12 +116,10 @@
     margin-left: 10px;
     display: flex;
     justify-content: center;
-  }
+}
 
 
-
-
-  .bio-info input{
+.bio-info input {
 
     background-color: #F1F1FA;
     height: 191px;
@@ -129,28 +127,40 @@
     position: center;
     border: none;
 
-  }
+}
 
-  .avatar-img{
-      height: 200px;
-      width: 200px;
-      display: flex;
-      margin-left: 300px;
-      border: #006b1b;
-  }
-
-  .counter-km{
-  padding-bottom: 120px;
+.avatar-img {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    padding-left: 600px;
 
 }
 
-.counter-km input{
-  width: 30px;
+.counter-km {
+    padding-bottom: 120px;
 
 }
 
-.activities-box{
-background-color: #5b80b2;
+.counter-km input {
+    width: 30px;
+
+}
+
+.activities-box {
+    padding: 20px;
+    margin: 20px;
+    flex: 1;
+    align-items: center;
+    background-color: #5b80b2;
+    text-align: left;
+
+}
+
+.activities-box p {
+    color: #000000;
+    padding-left: 40px;
+    font-family: "DM Sans";
 
 }
 
