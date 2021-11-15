@@ -19,6 +19,7 @@
 
 body {
     background-color: var(--clr-grey3);
+    overflow-x: hidden;
     color: var(--clr-text);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -263,6 +264,7 @@ nav ul>li a:active{
 
     body{
         font-size:18px;
+        overflow-x: hidden
     }
 
     #map { 
