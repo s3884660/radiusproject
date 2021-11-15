@@ -2,7 +2,12 @@
 <main>
   <!-- temporary using css container and form- container-->
   <div class="create_activity_form_outer">
-    <form class="create_activity_form" action="" method="post" enctype="multipart/form-data">
+    <form
+      class="create_activity_form"
+      action=""
+      method="post"
+      enctype="multipart/form-data"
+    >
       {% csrf_token %}
       <div class="create-activity">
         <h1>Create Activity</h1>
@@ -21,8 +26,11 @@
         {{ form.datetime }}
       </div>
 
-      <div class="image_container">
-        <img src="{% static 'img/upload-image.png' %}" alt="activity-image" />
+      <div class="create_activity_inner_container">
+        <div>
+          <img src="{% static 'img/upload-image.png' %}" alt="activity-image" />
+        </div>
+
         <div class="create_map_conatiner" id="create_map_container">
           {% include 'partials/maps.html' %}
           <script>
@@ -41,31 +49,33 @@
             map.on("click", add_marker);
 
             // or add marker through searchbox
-            geocoder.on('result', function(e) {
+            geocoder.on("result", function (e) {
               var coordinates = e.result.center;
               var eventLong = e.result.center[0];
               var eventLat = e.result.center[1];
               var address = e.result.place_name;
-              console.log("Lng:", e.result.center[0], "Lat:", e.result.center[1], address);
+              console.log(
+                "Lng:",
+                e.result.center[0],
+                "Lat:",
+                e.result.center[1],
+                address
+              );
               marker.setLngLat(coordinates).addTo(map);
               document.getElementById("id_longitude").value = eventLong;
               document.getElementById("id_latitude").value = eventLat;
               document.getElementById("id_address").value = address;
             });
-
-
-
           </script>
-
+        </div>
+        <div>
           <h4>Tags</h4>
           <!-- TODO turn off border, add background colour -->
           {{ form.tags }}
         </div>
       </div>
-      <div class="hidden">
-        {{ form.id }}
-      </div>
-      <input type="submit" value="Create" /> 
+      <div class="hidden">{{ form.id }}</div>
+      <input type="submit" value="Create" />
     </form>
   </div>
 </main>

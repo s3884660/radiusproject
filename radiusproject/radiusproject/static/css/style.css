@@ -478,11 +478,19 @@ input[type=submit]{
 }
 
 .create-activity{
+    margin: 1vw 1vw;
+    padding:1vw 1vw;
     min-width: 30vw;
 }
 
-.image_container {
-    padding: 10px;
+.create_activity_inner_container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+    width: 100%;
+    margin: 1vw 1vw;
+    padding:1vw 1vw;
 }
 
 .create_activity_form_outer{
@@ -505,6 +513,12 @@ input[type=submit]{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
+}
+
+.create_map_conatiner{
+    width:100%;
+    margin: 1vw 1vw;
+    padding: 1vw 1vw;
 }
 
 /* ------------- tags ------------- */
