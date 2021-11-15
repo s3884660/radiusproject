@@ -5,10 +5,6 @@
     justify-content: center;
   }
 
-  body {
-    margin: 0px;
-  }
-
   .flex-sizing {
     padding: 20px;
     margin: 0px;
@@ -46,9 +42,17 @@
     height: 38px;
     width: 142px;
     cursor: pointer;
-    margin-left: 900px;
+    margin-left: 750px;
     border: none;
     text-decoration: none;
+  }
+
+    .button2 a{
+
+    font-size: 10px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: white;
   }
 
   .pill1 {
@@ -61,11 +65,9 @@
     height: 30px;
     width: 90px;
     cursor: pointer;
-    margin-top: 60px;
+    margin-top: 10px;
     border: none;
     display: inline-block;
-    padding-right: 5px;
-    padding-left: 5px;
     margin-right: 10px;
     margin-left: 10px;
     position: center;
@@ -84,7 +86,7 @@
     height: 30px;
     width: 90px;
     cursor: pointer;
-    margin-top: 60px;
+    margin-top: 10px;
     border: none;
     display: inline-block;
     padding-right: 5px;
@@ -104,7 +106,7 @@
     height: 30px;
     width: 90px;
     cursor: pointer;
-    margin-top: 60px;
+    margin-top: 10px;
     border: none;
     display: inline-block;
     padding-right: 5px;
@@ -129,10 +131,10 @@
 
   }
 
-  .avatar-logo{
+  .avatar-img{
       height: 200px;
       width: 200px;
-      padding-left: 400px;
+      padding-left: 200px;
   }
 
   .counter-km{
@@ -149,3 +151,4 @@
   background-color: tomato;
 
 }
+

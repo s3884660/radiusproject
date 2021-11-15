@@ -8,14 +8,15 @@
   <meta charset="UTF-8">
   <title>User Profile</title>
   <link rel="stylesheet" href="{% static 'css/user-profile.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
   <div class="flex">
     <div class="profile-box">
       <div class="flex-sizing">
-        <button class="button button2" class="fa-solid fa-pen-to-square"><a href="" onClick="return popitup('http://www.abc.com/youpage')">Edit Profile</a></button>
-          <img class="avatar-logo" src="/static/img/avat{{ profile.avatar }}.png" alt="alt text">
+        <button class="button2"><a href="" onClick="return popitup('http://www.abc.com/youpage')">Edit Profile</a></button>
+          <img class="avatar-img" src="/static/img/avat{{ profile.avatar }}.png" alt="alt text">
           <p style="font-size: 20px; margin-top: 0px; font-style: italic; text-align: center;">{{ user.username }}</p>
           <p style="font-size: 14px; margin-top: 0px; font-style: italic; text-align: center;">This user hasn't enter a bio</p>
         {{ profile.radius }}
