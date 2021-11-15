@@ -134,7 +134,9 @@
   .avatar-img{
       height: 200px;
       width: 200px;
-      padding-left: 200px;
+      display: flex;
+      margin-left: 300px;
+      border: #006b1b;
   }
 
   .counter-km{
@@ -147,8 +149,8 @@
 
 }
 
-.counter-km input total{
-  background-color: tomato;
+.activities-box{
+background-color: #5b80b2;
 
 }
 
