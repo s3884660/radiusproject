@@ -17,6 +17,9 @@ function showPosition(position) {
     center: [longitude, latitude],
     essential: true
   });
+
+
+  getVisibleMarkers();
 }
 
 function addMarkers(coordinates,title,tags,address,url) {
