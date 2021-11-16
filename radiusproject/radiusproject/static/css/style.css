@@ -578,6 +578,7 @@ input[type=submit]{
 .activity_detail_inner{
     display:flex;
     flex-direction:column;
+    justify-content: space-evenly;
     max-width: 30vw;
     min-width: 33vw;
 }
@@ -595,6 +596,33 @@ input[type=submit]{
     max-width: 225px;
     max-height: 225px;
     margin: 1vw 1vw;
+}
+
+
+/*-- favourite checkbox  --*/
+#favourite_activity {
+    padding: 20px;
+}
+
+#favourite_activity{
+  display: inline;
+}
+
+#favourite_activity{
+    display: inline-block;
+    background-color: #fff;
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: #adadad;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    transition: all .2s;
+}
+
+#favourite_activity {
+    padding: 8px 12px;
+    max-width: 175px;
+    cursor: pointer;
 }
 
 /*-------------- About Page -----------------*/

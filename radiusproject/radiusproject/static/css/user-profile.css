@@ -53,6 +53,7 @@
     padding-bottom: 2px;
     text-decoration: none;
     color: white;
+    line-height: 1;
 }
 
 .pill1 {
@@ -73,6 +74,7 @@
     position: center;
     display: flex;
     justify-content: center;
+    line-height: 2;
 
 }
 
@@ -95,6 +97,7 @@
     margin-left: 10px;
     display: flex;
     justify-content: center;
+    line-height: 2;
 }
 
 .pill3 {
@@ -116,6 +119,7 @@
     margin-left: 10px;
     display: flex;
     justify-content: center;
+    line-height: 2;
 }
 
 
