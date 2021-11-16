@@ -49,3 +49,6 @@ function login() {
   window.location.href = "/login"
 }
 
+function goToActivity(id) {
+  window.location.href = "/activities/" + id
+}

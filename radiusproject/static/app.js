@@ -42,3 +42,6 @@ function createActivity() {
   window.location.href = "/activity/create"
 }
 
+function goToActivity(id) {
+  window.location.href = "/activities/" + id
+}

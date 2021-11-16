@@ -600,6 +600,9 @@ input[type=submit]{
     margin: 1vw 1vw;
 }
 
+.fav_activity_container {
+    overflow-y: hidden;
+}
 
 /*-- favourite checkbox  --*/
 #favourite_activity {
