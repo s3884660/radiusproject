@@ -1,18 +1,40 @@
 {% load static %}
 {% if activities %}
-    <div class="activityList">
+    <div class="activityList" id = "activityList">
+                <script>
+                    map.on('render', () => {
+                        document.getElementById("activityList").innerHTML = '';
+                        activityCounter=0;
+                    });
+                </script>       
         {% for activity in activities %}
-        {% if forloop.counter <= 8 %}
-        <div class="activity_container">
-        <img src="static/img/" alt="{{ activity.name }}" class="overlay_img">
-                <div class="activity_title">{{ activity.name }}</div>
-                <div class="overlay_description">
-                        {{ activity.description }}<br>
-                        <button onclick="window.location.href='/activities/{{activity.id}}'" class="popup_button">View</button>
-                </div>
-        </div>
-        {% endif %}
-        {% endfor %}
+        <script>
+                map.on('render', () => {
+                        var center = map.getCenter();
+                        console.log(center, center.lng, center.lat);
+                        var latFieldPlus = center.lat +0.1;
+                        var latFieldMinus = center.lat -0.1;
+                        var longFieldPlus = center.lng +0.1;
+                        var longFieldMinus = center.lng -0.1;
+                        var actLatitude = {{activity.latitude}};
+                        var actLongitude = {{activity.longitude}};
+
+                        if(activityCounter<8){
+                                if (actLatitude <= latFieldPlus && actLatitude >= latFieldMinus && actLongitude <= longFieldPlus && actLongitude >= longFieldMinus){
+                                        console.log ("test", latFieldPlus, latFieldMinus, actLatitude, longFieldPlus, longFieldMinus, actLongitude);
+                                        document.getElementById("activityList").innerHTML +=
+                                        "<div class='activity_container'>" +
+                                        "<img src='static/img/' alt='{{activity.name}}' class='overlay_img'>" +
+                                        "<div class='activity_title'>{{activity.name}}</div>" +
+                                        "<div class='overlay_description'>{{activity.description}}<br>" +
+                                        "<button onclick=window.location.href='/activities/{{activity.id}}' class='popup_button'>View</button>" +
+                                        "</div></div>";
+                                        activityCounter++;
+                                }
+                        }
+                });
+        </script>
+{% endfor %}
 {% endif %}
 <button onclick="window.location.href='/activities'" class="moreAct">View more activities</button>
 </div>

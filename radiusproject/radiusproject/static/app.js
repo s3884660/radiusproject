@@ -1,6 +1,4 @@
-var latitude;
-var longitude;
-var x = document.getElementById("demo");
+var activityCounter=0;
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -17,10 +15,8 @@ function showPosition(position) {
     center: [longitude, latitude],
     essential: true
   });
-
-
-  getVisibleMarkers();
 }
+
 
 function addMarkers(coordinates,title,tags,address,url) {
   const el = document.createElement('div');

@@ -8,35 +8,6 @@
 
 <!-- Maps -->
   {% include 'partials/maps.html' %}
-<script>
-map.on('render', (function() {
-    function intersectRect(r1, r2) {
-      return !(r2.left > r1.right ||
-        r2.right < r1.left ||
-        r2.top > r1.bottom ||
-        r2.bottom < r1.top);
-    }
-
-    function getVisibleMarkers() {
-      var cc = map.getContainer();
-      var els = cc.getElementsByClassName('marker');
-      var ccRect = cc.getBoundingClientRect();
-      var visibles = [];
-      for (var i = 0; i < els.length; i++) {
-        var el = els.item(i);
-        var elRect = el.getBoundingClientRect();
-        intersectRect(ccRect, elRect) && visibles.push(el);
-      }
-      if (visibles.length > 0) console.log(visibles);
-    }
-
-    var tm;
-    return function() {
-      clearTimeout(tm);
-      tm = setTimeout(getVisibleMarkers, 100);
-    }
-  }()))
-</script>
 <!-- Activities -->
 <h1>Recommended activities</h1>
   {% include 'partials/activitycard.html' %}

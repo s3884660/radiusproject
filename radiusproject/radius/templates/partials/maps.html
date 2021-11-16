@@ -35,7 +35,10 @@
       accessToken: mapboxgl.accessToken, // Set the access token
       placeholder: 'Search for location',
       mapboxgl: mapboxgl, // Set the mapbox-gl instance
-      marker: false // Do not use the default marker style
+      marker: false, // Do not use the default marker style
+      flyTo: {
+      zoom:10
+      },
     });
 
     // Add the geocoder to the map
