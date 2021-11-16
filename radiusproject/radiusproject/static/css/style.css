@@ -600,11 +600,6 @@ input[type=submit]{
 
 
 /*-- favourite checkbox  --*/
-.tag_container {
-    max-width: 645px;
-    font-size: 14px;
-}
-
 #favourite_activity {
     padding: 20px;
 }
