@@ -13,7 +13,7 @@
       @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@100&display=swap');
   </style>
-  
+
 </head>
 <body>
   <div class="flex">
@@ -33,11 +33,25 @@
       </div>
     </div>
     <div class="activities-box">
-<!--      <div class="flex-sizing">-->
       <p style="font-size: 20px; margin-top: 0px;">Your activities</p>
     </div>
-<!--    </div>-->
   </div>
+
+<!-- Activities -->
+<!-- Buttons -->
+<div class="homebuttons">
+  <div><h1>Share your ideas</h1>
+    <button><div>Create an activity for the community</div><div><i class="fas fa-plus-circle"></i></div></i></button>
+  </div>
+  <div><h1>Find something nearby</h1>
+    <button><div>Find an activity nearby that you like</div><div><i class="fas fa-search"></i></div></button>
+  </div>
+</div>
+<!-- More suggestions -->
+<h1>More things to do!</h1>
+{% include 'partials/activitycard.html' %}
+
+</main>
 
   <script src="{% static 'js/registration.js' %}"></script>
 </body>
