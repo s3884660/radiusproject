@@ -24,7 +24,8 @@ urlpatterns = [
     path('avatar', views.avatar, name='avatar'),
     path('logout', views.logout_view, name='logout'),
     path('postcode', views.postcode),
-    path('profile', views.profile)
+    path('profile', views.profile),
+    path('savefavourite', views.savefave)
 ]
 
 if settings.DEBUG:
