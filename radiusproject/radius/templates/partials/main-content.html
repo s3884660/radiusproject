@@ -9,16 +9,16 @@
 <!-- Maps -->
   {% include 'partials/maps.html' %}
 <!-- Activities -->
-<h1>Recommended activities</h1>
+<h1>Activities around you</h1>
   {% include 'partials/activitycard.html' %}
   
 <!-- Buttons -->
 <div class="homebuttons">
   <div><h1>Share your ideas</h1>
-    <button><div>Create an activity for the community</div><div><i class="fas fa-plus-circle"></i></div></i></button>
+    <button onclick="window.location.href='activity/create'"><div>Create an activity for the community</div><div><i class="fas fa-plus-circle"></i></div></i></button>
   </div>
   <div><h1>Find something nearby</h1>
-    <button><div>Find an activity nearby that you like</div><div><i class="fas fa-search"></i></div></button>
+    <button onclick="window.location.href='/all_activities'"><div>Find an activity nearby that you like</div><div><i class="fas fa-search"></i></div></button>
   </div>
 </div>
 <!-- More suggestions -->

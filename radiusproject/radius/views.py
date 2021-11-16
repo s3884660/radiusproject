@@ -61,6 +61,10 @@ def favourites(request):
     activities = request.user.profile.favourites.all()
     return render(request, 'favourites.html', {'activities' :activities})
 
+def allActivities(request):
+    activities = Activity.objects.all()
+    return render(request, 'allactivities.html', {'activities' :activities})
+
 class ActivityListView(generic.ListView):
     model = Activity
 
@@ -86,7 +90,7 @@ def create_activity(request):
         # check whether it's valid:
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/activities/')
+            return HttpResponseRedirect('/all_activities')
 
     # if a GET (or any other method) we'll create a blank form
     else:

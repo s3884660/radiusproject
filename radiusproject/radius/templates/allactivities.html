@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Navbar -->
+{% include 'partials/navbar.html' %}
+
+<!-- Main -->
+<main>
+    <h1>List of Activities</h1>
+ <!-- Activities -->
+ {% if activities %}
+ <div class="activityList">
+         {% for activity in activities %}
+                 <div class="activity_container">
+                         <img src="media/{{activity.image}}" alt="{{ activity.name }}" class='overlay_img'>
+                         <div class='activity_title'>{{activity.name}}</div>
+                         <div class='overlay_description'>
+                           <b>Address: </b>{{ activity.address }}<br>
+                           <b>Tags: </b>{{ activity.tags.all|join:", " }}<br>
+                           <button onclick="window.location.href='/activities/{{activity.id}}'" class='popup_button'>View</button>
+                         </div>     
+                 </div>
+         {% endfor %}
+{% endif %}
+ </div>
+
+</main>
+<!-- Footer -->
+{% include 'partials/footer.html' %}
+
+
+{% endblock %}
