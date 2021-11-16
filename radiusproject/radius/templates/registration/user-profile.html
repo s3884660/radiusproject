@@ -19,13 +19,13 @@
   <div class="flex">
     <div class="profile-box">
       <div class="flex-sizing">
-        <button class="button2"><a href="" onClick="return popitup('modal-dialog.html')">Edit Profile</a></button>
+        <button class="button2"><a href="modal-dialog.html" onClick="return popitup('modal-dialog')">Edit Profile</a></button>
           <img class="avatar-img" src="/static/img/avat{{ profile.avatar }}.png" alt="alt text" style="align-content: center">
         <p style="font-size: 20px; margin-top: 0px; text-align: center;"><strong>{{ user.username }}</strong></p>
           <p style="font-size: 14px; margin-top: 0px; font-style: italic; text-align: center;">This user hasn't enter a bio</p>
         {{ profile.radius }}
         <div class="flex">
-          <span class="pill1">Healthy</span>
+          <span class="pill1"><a style="">Healthy</a></span>
           <span class="pill2">Sports</span>
           <span class="pill3">Exercise</span>
         </div>
