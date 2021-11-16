@@ -13,9 +13,12 @@
         <p>Description : {{ activity.description }}</p>
         <p>Address : {{ activity.address }}</p>
         <p>Time & Date : {{ activity.datetime }}</p>
-        <div id="favourite_activity">
-          <input type="checkbox" id="favourite_activity" name="favourite_activity">
-          <label for="favourite_activity" id=favourite_activity_label>Favourite Activity</label>
+        <div>
+          <form action="/savefavourite" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="id_id" value="{{ activity.id }}">
+          <input type="submit" id="favourite_activity" value="Save As Favourite">
+          </form>
         </div>
       </div>
       <!-- can't quite get it to display right using another div-->

@@ -58,7 +58,7 @@ def history(request):
     return render(request, 'history.html', {'activities' :activities})
 
 def favourites(request):
-    activities = Activity.objects.all()
+    activities = request.user.profile.favourites.all()
     return render(request, 'favourites.html', {'activities' :activities})
 
 class ActivityListView(generic.ListView):
@@ -67,6 +67,8 @@ class ActivityListView(generic.ListView):
 
 class ActivityDetailView(generic.DetailView):
     model = Activity
+    form_class = SaveFavourite
+    fields = ['id']
     login_required = True
 
     def get_object(self, **kwargs):
@@ -139,3 +141,15 @@ def postcode(request):
 def profile(request):
     profile = request.user.profile
     return render(request, 'registration/user-profile.html', {'profile': profile})
+
+
+def savefave(request):
+    if request.method == 'POST':
+        form = SaveFavourite(request.POST)
+        if form.is_valid():
+            actid = form['id_id'].value()
+            obj = Activity.objects.get(pk=actid)
+            request.user.profile.favourites.add(obj)
+        else:
+            actid = ""
+    return redirect('activities/%s' % actid)

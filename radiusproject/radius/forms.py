@@ -48,3 +48,6 @@ class ProfileFormPostcode(forms.ModelForm):
         model = Profile
         fields = ['postcode', 'radius']
 
+
+class SaveFavourite(forms.Form):
+    id_id = forms.CharField()
