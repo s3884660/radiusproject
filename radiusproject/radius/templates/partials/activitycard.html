@@ -12,10 +12,10 @@
                 map.on('render', () => {
                         var center = map.getCenter();
                         console.log(center, center.lng, center.lat);
-                        var latFieldPlus = center.lat +0.1;
-                        var latFieldMinus = center.lat -0.1;
-                        var longFieldPlus = center.lng +0.1;
-                        var longFieldMinus = center.lng -0.1;
+                        var latFieldPlus = center.lat +0.2;
+                        var latFieldMinus = center.lat -0.2;
+                        var longFieldPlus = center.lng +0.2;
+                        var longFieldMinus = center.lng -0.2;
                         var actLatitude = {{activity.latitude}};
                         var actLongitude = {{activity.longitude}};
 
@@ -24,9 +24,9 @@
                                         console.log ("test", latFieldPlus, latFieldMinus, actLatitude, longFieldPlus, longFieldMinus, actLongitude);
                                         document.getElementById("activityList").innerHTML +=
                                         "<div class='activity_container'>" +
-                                        "<img src='static/img/' alt='{{activity.name}}' class='overlay_img'>" +
+                                        "<img src='media/{{activity.image}}' alt='{{activity.name}}' class='overlay_img'>" +
                                         "<div class='activity_title'>{{activity.name}}</div>" +
-                                        "<div class='overlay_description'>{{activity.description}}<br>" +
+                                        "<div class='overlay_description'><b>Address: </b>{{ activity.address }}<br><b>Tags: </b>{{ activity.tags.all|join:", " }}<br>" +
                                         "<button onclick=window.location.href='/activities/{{activity.id}}' class='popup_button'>View</button>" +
                                         "</div></div>";
                                         activityCounter++;
