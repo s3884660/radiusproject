@@ -2,10 +2,9 @@
 {% if activities %}
         <div class="fav_activityList">
                 {% for activity in activities %}
-                        <div class="fav_activity_container">
-                                <div class="fav_img"><img src="static/img/logo_icon.png" alt="{{ activity.name }}"></div>
+                        <div class="fav_activity_container" onclick="window.location.href='/activities/{{activity.id}}'">
+                                <div class="fav_img"><img src="media/{{activity.image}}" alt="{{ activity.name }}"></div>
                                 <div class="fav_description">
-                                        <b>Description: </b>{{ activity.description }}<br>
                                         <b>Address: </b>{{ activity.address }}<br>
                                         <b>Tags: </b>{{ activity.tags.all|join:", " }}<br>
                                 </div>
