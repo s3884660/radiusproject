@@ -1,5 +1,5 @@
 {% extends "../base.html" %}
-{% load static %} 
+{% load static %}
 {% block content %}
 {% include '../partials/navbar.html' %}
 
@@ -17,17 +17,13 @@
           <form action="/savefavourite" method="post">
             {% csrf_token %}
             <input type="hidden" name="id_id" value="{{ activity.id }}">
-          <input type="submit" id="favourite_activity" value="Save As Favourite">
+            <input type="submit" id="favourite_activity" value="Save As Favourite">
           </form>
         </div>
       </div>
       <!-- can't quite get it to display right using another div-->
       <div class="activity_detail_inner-right">
-        <img
-          src="/media/{{ activity.image }}"
-          alt="{{ activity.name }}"
-          class="overlay_img_ext"
-        />
+        <img src="/media/{{ activity.image }}" alt="{{ activity.name }}" class="overlay_img_ext" />
         {% include '../partials/secondary_map.html' %}
       </div>
     </div>

@@ -155,7 +155,7 @@ nav ul>li a:active{
 .overlay_img {
     display: block;
     height: 18.5vw;
-    width:19.74vw;
+    width: 100%;
     object-fit: cover;
 }
 
