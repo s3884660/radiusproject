@@ -1,1 +1,1 @@
-web: gunicorn radiusproject.wsgi
+web: gunicorn --pythonpath radiusproject radiusproject.wsgi
