@@ -1,0 +1,170 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: center;
+}
+
+.flex-sizing {
+    padding: 20px;
+    margin: 0px;
+    flex: 1;
+    align-items: center;
+    background-color: transparent;
+
+}
+
+.flex-sizing p {
+    color: #000000;
+
+}
+
+
+.profile-box {
+    background: #f7f7f7;
+    border: 6px solid #F1F1FA;
+    padding: 50px;
+    border-radius: 8px;
+    display: flex;
+    width: 1080px;
+    height: 500px;
+    margin-top: 40px;
+}
+
+
+.button2 {
+
+    background-color: #5EAE66;
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 14px;
+    color: white;
+    height: 38px;
+    width: 142px;
+    cursor: pointer;
+    margin-left: 750px;
+    border: none;
+    text-decoration: none;
+}
+
+.button2 a {
+
+    font-size: 10px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: white;
+    line-height: 1;
+}
+
+.pill1 {
+
+    background-color: #A162F2;
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 14px;
+    color: white;
+    height: 30px;
+    width: 90px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: center;
+    display: flex;
+    justify-content: center;
+    line-height: 2;
+
+}
+
+.pill2 {
+
+    background-color: #FF9662;
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 14px;
+    color: white;
+    height: 30px;
+    width: 90px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    line-height: 2;
+}
+
+.pill3 {
+
+    background-color: #ED6B63;
+    border-style: solid;
+    font-size: 14px;
+    color: white;
+    height: 30px;
+    width: 90px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    line-height: 2;
+}
+
+
+.bio-info input {
+
+    background-color: #F1F1FA;
+    height: 191px;
+    width: 468px;
+    position: center;
+    border: none;
+
+}
+
+.avatar-img {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    padding-left: 600px;
+
+}
+
+.counter-km {
+    padding-bottom: 120px;
+
+}
+
+.counter-km input {
+    width: 30px;
+
+}
+
+.activities-box {
+    padding: 20px;
+    margin: 20px;
+    flex: 1;
+    align-items: center;
+    background-color: transparent;
+    text-align: left;
+
+}
+
+.activities-box p {
+    color: #000000;
+    padding-left: 40px;
+    font-family: "DM Sans";
+
+}
+

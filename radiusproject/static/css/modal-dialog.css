@@ -1,0 +1,47 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: center;
+  }
+
+  body {
+    margin: 0px;
+  }
+
+  .flex-sizing {
+    padding: 20px;
+    margin: 0px;
+    flex: 1;
+    align-items: center;
+
+  }
+
+
+  .item {
+    background: #f7f7f7;
+    border: 1px solid #e7e7e7;
+    padding: 50px;
+    border-radius: 8px;
+    display: grid;
+    width: 552px;
+    height: 573px;
+    margin-top: 80px;
+  }
+
+  .button1 {
+
+    background-color: white ;
+    border-color: #5EAE66;
+    border-radius: 10px;
+    color: #5EAE66;
+    height: 50px;
+    width: 175px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background: transparent;
+    border-style: solid;
+    cursor: pointer;
+
+  }
