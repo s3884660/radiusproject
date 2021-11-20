@@ -73,7 +73,7 @@ class Profile(models.Model):
     favourites = models.ManyToManyField(Activity, blank=True, related_name="user_favourites")
     history = models.ManyToManyField(Activity, blank=True, related_name="user_history")
 
-Apparently putting the signals here is the ugly way to do it but this is getting frustrating
+# Apparently putting the signals here is the ugly way to do it but this is getting frustrating
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
